@@ -1117,6 +1117,51 @@ button.large, [type="button"].large, [type="submit"].large, [type="reset"].large
 	margin: var(--universal-margin);
 }
 
+a.splash-button {
+	position: absolute;
+	top: 65vh;
+	width: 50vw;
+	left: 25vw;
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+a.button.splash-primary {
+	border-color: var(--blue);
+	background: none;
+	transition: all 0.3s
+}
+
+a.button.splash-secondary {
+	border-color: var(--pink);
+	background: none;
+	transition: all 0.3s
+}
+
+a.button.splash-tertiary {
+	border-color: var(--green);
+	background: none;
+	transition: all 0.3s
+}
+
+a.button.splash-primary:hover {
+	background: var(--blue);
+	color: #f8f8f8;
+	border-color: var(--blue);
+}
+
+a.button.splash-secondary:hover {
+	background: var(--pink);
+	color: #f8f8f8;
+	border-color: var(--pink);
+}
+
+a.button.splash-tertiary:hover {
+	background: var(--green);
+	color: #f8f8f8;
+	border-color: var(--green);
+}
+
 /*
 	Definitions for navigation elements.
 */
