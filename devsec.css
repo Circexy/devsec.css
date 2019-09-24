@@ -23,16 +23,16 @@
 	--secondary-fore-color: var(--white);
 	--back-color: var(--black);
 	--secondary-back-color: var(--black);
-	--blockquote-color: var(--warning);
-	--pre-color: var(--blue);
+	--blockquote-color: var(--pink);
+	--pre-color: var(--green);
 	--border-color: var(--white);
 	--secondary-border-color: var(--grey);
 	--heading-ratio: 1.19;
 	--universal-margin: 0.5rem;
 	--universal-padding: 0.5rem;
 	--universal-border-radius: 0.125rem;
-	--a-link-color: var(--pink);
-	--a-visited-color: var(--green);
+	--a-link-color: var(--blue);
+	--a-visited-color: var(--blue);
 
 	/* Card component CSS variable definitions */
 	--card-back-color: var(--black);
@@ -47,9 +47,9 @@
 	--input-back-color: var(--black);
 	--input-fore-color: var(--white);
 	--input-border-color: var(--grey);
-	--input-focus-color: var(--blue);
+	--input-focus-color: var(--pink);
 	--input-invalid-color: var(--error);
-	--button-back-color: var(--black);
+	--button-back-color: var(--grey);
 	--button-hover-back-color: var(--grey);
 	--button-fore-color: var(--white);
 	--button-border-color: transparent;
@@ -268,7 +268,7 @@ code, kbd, pre, samp {
 }
 
 code {
-	background: var(--secondary-back-color);
+	background: var(--blue);
 	border-radius: var(--universal-border-radius);
 	padding: calc(var(--universal-padding) / 4) calc(var(--universal-padding) / 2);
 }
@@ -282,7 +282,7 @@ kbd {
 
 pre {
 	overflow: auto;
-	background: var(--secondary-back-color);
+	background: var(--grey);
 	padding: calc(1.5 * var(--universal-padding));
 	margin: var(--universal-margin);
 	border: 0.0625rem solid var(--secondary-border-color);
@@ -833,7 +833,6 @@ a:hover, a:focus {
 form {
 	background: var(--form-back-color);
 	color: var(--form-fore-color);
-	border: 0.0625rem solid var(--form-border-color);
 	border-radius: var(--universal-border-radius);
 	margin: var(--universal-margin);
 	padding: calc(2 * var(--universal-padding)) var(--universal-padding);
@@ -847,6 +846,7 @@ fieldset {
 }
 
 legend {
+	color: var(--green);
 	box-sizing: border-box;
 	display: table;
 	max-width: 100%;
@@ -976,7 +976,7 @@ option {
 	content: '';
 	top: calc(0.0625rem + var(--universal-padding) / 2);
 	left: calc(0.0625rem + var(--universal-padding) / 2);
-	background: var(--input-fore-color);
+	background: var(--pink);
 	width: 0.5rem;
 	height: 0.5rem;
 }
@@ -1024,7 +1024,8 @@ a.button:hover,
 a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
 a[role="button"]:hover,
 a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
-	background: var(--button-hover-back-color);
+	/*background: var(--button-hover-back-color);*/
+	filter: brightness(85%);
 	border-color: var(--button-hover-border-color);
 }
 
@@ -1069,29 +1070,32 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
 	 Custom elements for forms and input elements.
 */
 button.primary, [type="button"].primary, [type="submit"].primary, [type="reset"].primary, .button.primary, [role="button"].primary {
-	--button-back-color: #1976d2;
+	--button-back-color: var(--blue);
 	--button-fore-color: #f8f8f8;
 }
 
 button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus, [type="reset"].primary:hover, [type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
+	filter: brightness(85%);
 	--button-hover-back-color: #1565c0;
 }
 
 button.secondary, [type="button"].secondary, [type="submit"].secondary, [type="reset"].secondary, .button.secondary, [role="button"].secondary {
-	--button-back-color: #d32f2f;
+	--button-back-color: var(--pink);
 	--button-fore-color: #f8f8f8;
 }
 
 button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus, [type="reset"].secondary:hover, [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
+	filter: brightness(85%);
 	--button-hover-back-color: #c62828;
 }
 
 button.tertiary, [type="button"].tertiary, [type="submit"].tertiary, [type="reset"].tertiary, .button.tertiary, [role="button"].tertiary {
-	--button-back-color: #308732;
+	--button-back-color: var(--green);
 	--button-fore-color: #f8f8f8;
 }
 
 button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus, [type="reset"].tertiary:hover, [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
+	filter: brightness(85%);
 	--button-hover-back-color: #277529;
 }
 
@@ -1827,11 +1831,12 @@ mark.inline-block {
 	 Custom elements for contextual background elements, toasts and tooltips.
 */
 mark.secondary {
-	--mark-back-color: #d32f2f;
+	--mark-back-color: var(--pink);
 }
 
 mark.tertiary {
-	--mark-back-color: #308732;
+	--mark-back-color: var(--green);
+	color: var(--black);
 }
 
 mark.tag {
