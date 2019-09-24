@@ -84,9 +84,7 @@
 	--table-head-fore-color: var(--white);
 	--table-body-back-color: var(--black);
 	--table-body-fore-color: var(--white);
-	--table-body-alt-back-color: var(--black);
-
-	--table-body-alt-back-color: var(--black);
+	--table-body-alt-back-color: var(--grey);
 
 	--table-body-hover-back-color: var(--grey);
 
@@ -961,6 +959,7 @@ option {
 
 [type="checkbox"]:checked:before {
 	content: '\2713';
+	color: var(--green);
 	font-family: sans-serif;
 	font-size: calc(1rem + var(--universal-padding) / 2);
 	top: calc(0rem - var(--universal-padding));
@@ -1341,232 +1340,45 @@ footer.sticky {
 	Definitions for the responsive table component.
 */
 /* Table module CSS variable definitions. */
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	margin: 0;
-	display: flex;
-	flex: 0 1 auto;
-	flex-flow: row wrap;
-	padding: var(--universal-padding);
-	padding-top: 0;
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left; 
+  width: 100%;
 }
 
-table caption {
-	font-size: 1.5rem;
-	margin: calc(2 * var(--universal-margin)) 0;
-	max-width: 100%;
-	flex: 0 0 100%;
+.table.table-striped tbody tr:nth-of-type(odd) {
+  background: var(--grey);
 }
 
-table thead, table tbody {
-	display: flex;
-	flex-flow: row wrap;
-	border: 0.0625rem solid var(--table-border-color);
+.table tbody tr.active,
+.table.table-striped tbody tr.active {
+  background: var(--grey);
 }
 
-table thead {
-	z-index: 999;
-	border-radius: var(--universal-border-radius) var(--universal-border-radius) 0 0;
-	border-bottom: 0.0625rem solid var(--table-border-separator-color);
+.table.table-hover tbody tr:hover {
+  background: var(--blue);
 }
 
-table tbody {
-	border-top: 0;
-	margin-top: calc(0 - var(--universal-margin));
-	border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
+.table.table-scroll {
+  display: block;
+  overflow-x: auto;
+  padding-bottom: .75rem;
+  white-space: nowrap;
 }
 
-table tr {
-	display: flex;
-	padding: 0;
+.table td,
+.table th {
+  border-bottom: .05rem solid var(--grey);
+  padding: .6rem .4rem;
 }
 
-table th, table td {
-	padding: calc(2 * var(--universal-padding));
+.table th {
+  border-bottom-width: .1rem;
 }
 
-table th {
-	text-align: left;
-	background: var(--table-head-back-color);
-	color: var(--table-head-fore-color);
-}
-
-table td {
-	background: var(--table-body-back-color);
-	color: var(--table-body-fore-color);
-	border-top: 0.0625rem solid var(--table-border-color);
-}
-
-table:not(.horizontal) {
-	overflow: auto;
-	max-height: 400px;
-}
-
-table:not(.horizontal) thead, table:not(.horizontal) tbody {
-	max-width: 100%;
-	flex: 0 0 100%;
-}
-
-table:not(.horizontal) tr {
-	flex-flow: row wrap;
-	flex: 0 0 100%;
-}
-
-table:not(.horizontal) th, table:not(.horizontal) td {
-	flex: 1 0 0%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-table:not(.horizontal) thead {
-	position: sticky;
-	top: 0;
-}
-
-table:not(.horizontal) tbody tr:first-child td {
-	border-top: 0;
-}
-
-table.horizontal {
-	border: 0;
-}
-
-table.horizontal thead, table.horizontal tbody {
-	border: 0;
-	flex: .2 0 0;
-	flex-flow: row nowrap;
-}
-
-table.horizontal tbody {
-	overflow: auto;
-	justify-content: space-between;
-	flex: .8 0 0;
-	margin-left: 0;
-	padding-bottom: calc(var(--universal-padding) / 4);
-}
-
-table.horizontal tr {
-	flex-direction: column;
-	flex: 1 0 auto;
-}
-
-table.horizontal th, table.horizontal td {
-	width: auto;
-	border: 0;
-	border-bottom: 0.0625rem solid var(--table-border-color);
-}
-
-table.horizontal th:not(:first-child), table.horizontal td:not(:first-child) {
-	border-top: 0;
-}
-
-table.horizontal th {
-	text-align: right;
-	border-left: 0.0625rem solid var(--table-border-color);
-	border-right: 0.0625rem solid var(--table-border-separator-color);
-}
-
-table.horizontal thead tr:first-child {
-	padding-left: 0;
-}
-
-table.horizontal th:first-child, table.horizontal td:first-child {
-	border-top: 0.0625rem solid var(--table-border-color);
-}
-
-table.horizontal tbody tr:last-child td {
-	border-right: 0.0625rem solid var(--table-border-color);
-}
-
-table.horizontal tbody tr:last-child td:first-child {
-	border-top-right-radius: 0.25rem;
-}
-
-table.horizontal tbody tr:last-child td:last-child {
-	border-bottom-right-radius: 0.25rem;
-}
-
-table.horizontal thead tr:first-child th:first-child {
-	border-top-left-radius: 0.25rem;
-}
-
-table.horizontal thead tr:first-child th:last-child {
-	border-bottom-left-radius: 0.25rem;
-}
-
-@media screen and (max-width: 767px) {
-	table, table.horizontal {
-		border-collapse: collapse;
-		border: 0;
-		width: 100%;
-		display: table;
-	}
-	table thead, table th, table.horizontal thead, table.horizontal th {
-		border: 0;
-		height: 1px;
-		width: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		clip: rect(0 0 0 0);
-		-webkit-clip-path: inset(100%);
-		clip-path: inset(100%);
-	}
-	table tbody, table.horizontal tbody {
-		border: 0;
-		display: table-row-group;
-	}
-	table tr, table.horizontal tr {
-		display: block;
-		border: 0.0625rem solid var(--table-border-color);
-		border-radius: var(--universal-border-radius);
-		background: #fafafa;
-		padding: var(--universal-padding);
-		margin: var(--universal-margin);
-		margin-bottom: calc(2 * var(--universal-margin));
-	}
-	table th, table td, table.horizontal th, table.horizontal td {
-		width: auto;
-	}
-	table td, table.horizontal td {
-		display: block;
-		border: 0;
-		text-align: right;
-	}
-	table td:before, table.horizontal td:before {
-		content: attr(data-label);
-		float: left;
-		font-weight: 600;
-	}
-	table th:first-child, table td:first-child, table.horizontal th:first-child, table.horizontal td:first-child {
-		border-top: 0;
-	}
-	table tbody tr:last-child td, table.horizontal tbody tr:last-child td {
-		border-right: 0;
-	}
-}
-
-table.striped tr:nth-of-type(2n) > td {
-	background: var(--table-body-alt-back-color);
-}
-
-@media screen and (max-width: 768px) {
-	table.striped tr:nth-of-type(2n) {
-		background: var(--table-body-alt-back-color);
-	}
-}
-
-table.hoverable tr:hover, table.hoverable tr:hover > td, table.hoverable tr:focus, table.hoverable tr:focus > td {
-	background: var(--table-body-hover-back-color);
-}
-
-@media screen and (max-width: 768px) {
-	table.hoverable tr:hover, table.hoverable tr:hover > td, table.hoverable tr:focus, table.hoverable tr:focus > td {
-		background: var(--table-body-hover-back-color);
-	}
+thead tr th {
+	border-bottom: 1px solid var(--pink) !important;
 }
 
 /*
@@ -2048,8 +1860,26 @@ span.icon-user {
 */
 /* Utility module CSS variable definitions */
 
+/* ########## */
+/* utilitaire */
+.center{
+  text-align: center;
+}
+
+.full{
+  width: 100%;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 
 .visually-hidden {
@@ -2094,6 +1924,11 @@ span.icon-user {
 @media screen and (min-width: 1280px) {
 	.responsive-margin {
 		margin: var(--universal-margin) !important;
+	}
+
+	.container {
+	    width: 70%;
+	    margin: 0 auto;
 	}
 }
 
@@ -2174,4 +2009,95 @@ span.icon-user {
 		clip-path: inset(100%) !important;
 		overflow: hidden !important;
 	}
+}
+
+/* ###### */
+/* filter */
+.filter .filter-tag#tag-a:checked ~ .filter-nav .chip[for="tag-a"],
+.filter .filter-tag#tag-b:checked ~ .filter-nav .chip[for="tag-b"],
+.filter .filter-tag#tag-c:checked ~ .filter-nav .chip[for="tag-c"],
+.filter .filter-tag#tag-d:checked ~ .filter-nav .chip[for="tag-d"],
+.filter .filter-tag#tag-e:checked ~ .filter-nav .chip[for="tag-e"],
+.filter .filter-tag#tag-f:checked ~ .filter-nav .chip[for="tag-f"],
+.filter .filter-tag#tag-g:checked ~ .filter-nav .chip[for="tag-g"],
+.filter .filter-tag#tag-h:checked ~ .filter-nav .chip[for="tag-h"],
+.filter .filter-tag#tag-i:checked ~ .filter-nav .chip[for="tag-i"],
+.filter .filter-tag#tag-j:checked ~ .filter-nav .chip[for="tag-j"],
+.filter .filter-tag#tag-k:checked ~ .filter-nav .chip[for="tag-k"],
+.filter .filter-tag#tag-l:checked ~ .filter-nav .chip[for="tag-l"],
+.filter .filter-tag#tag-m:checked ~ .filter-nav .chip[for="tag-m"],
+.filter .filter-tag#tag-n:checked ~ .filter-nav .chip[for="tag-n"],
+.filter .filter-tag#tag-o:checked ~ .filter-nav .chip[for="tag-o"],
+.filter .filter-tag#tag-p:checked ~ .filter-nav .chip[for="tag-p"],
+.filter .filter-tag#tag-q:checked ~ .filter-nav .chip[for="tag-q"],
+.filter .filter-tag#tag-r:checked ~ .filter-nav .chip[for="tag-r"],
+.filter .filter-tag#tag-s:checked ~ .filter-nav .chip[for="tag-s"],
+.filter .filter-tag#tag-t:checked ~ .filter-nav .chip[for="tag-t"],
+.filter .filter-tag#tag-u:checked ~ .filter-nav .chip[for="tag-u"],
+.filter .filter-tag#tag-v:checked ~ .filter-nav .chip[for="tag-v"],
+.filter .filter-tag#tag-w:checked ~ .filter-nav .chip[for="tag-w"],
+.filter .filter-tag#tag-x:checked ~ .filter-nav .chip[for="tag-x"],
+.filter .filter-tag#tag-y:checked ~ .filter-nav .chip[for="tag-y"],
+.filter .filter-tag#tag-z:checked ~ .filter-nav .chip[for="tag-z"],
+.filter .filter-tag#tag-0:checked ~ .filter-nav .chip[for="tag-0"],
+.filter .filter-tag#tag-1:checked ~ .filter-nav .chip[for="tag-1"],
+.filter .filter-tag#tag-2:checked ~ .filter-nav .chip[for="tag-2"],
+.filter .filter-tag#tag-3:checked ~ .filter-nav .chip[for="tag-3"],
+.filter .filter-tag#tag-4:checked ~ .filter-nav .chip[for="tag-4"],
+.filter .filter-tag#tag-5:checked ~ .filter-nav .chip[for="tag-5"],
+.filter .filter-tag#tag-6:checked ~ .filter-nav .chip[for="tag-6"],
+.filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for="tag-7"],
+.filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-8"],
+.filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-9"] {
+  background: var(--pink);
+  color: #fff;
+}
+
+.filter .filter-tag#tag-a:checked ~ .filter-body .filter-item:not([data-tag~="tag-a"]),
+.filter .filter-tag#tag-b:checked ~ .filter-body .filter-item:not([data-tag~="tag-b"]),
+.filter .filter-tag#tag-c:checked ~ .filter-body .filter-item:not([data-tag~="tag-c"]),
+.filter .filter-tag#tag-d:checked ~ .filter-body .filter-item:not([data-tag~="tag-d"]),
+.filter .filter-tag#tag-e:checked ~ .filter-body .filter-item:not([data-tag~="tag-e"]),
+.filter .filter-tag#tag-f:checked ~ .filter-body .filter-item:not([data-tag~="tag-f"]),
+.filter .filter-tag#tag-g:checked ~ .filter-body .filter-item:not([data-tag~="tag-g"]),
+.filter .filter-tag#tag-h:checked ~ .filter-body .filter-item:not([data-tag~="tag-h"]),
+.filter .filter-tag#tag-i:checked ~ .filter-body .filter-item:not([data-tag~="tag-i"]),
+.filter .filter-tag#tag-j:checked ~ .filter-body .filter-item:not([data-tag~="tag-j"]),
+.filter .filter-tag#tag-k:checked ~ .filter-body .filter-item:not([data-tag~="tag-k"]),
+.filter .filter-tag#tag-l:checked ~ .filter-body .filter-item:not([data-tag~="tag-l"]),
+.filter .filter-tag#tag-m:checked ~ .filter-body .filter-item:not([data-tag~="tag-m"]),
+.filter .filter-tag#tag-n:checked ~ .filter-body .filter-item:not([data-tag~="tag-n"]),
+.filter .filter-tag#tag-o:checked ~ .filter-body .filter-item:not([data-tag~="tag-o"]),
+.filter .filter-tag#tag-p:checked ~ .filter-body .filter-item:not([data-tag~="tag-p"]),
+.filter .filter-tag#tag-q:checked ~ .filter-body .filter-item:not([data-tag~="tag-q"]),
+.filter .filter-tag#tag-r:checked ~ .filter-body .filter-item:not([data-tag~="tag-r"]),
+.filter .filter-tag#tag-s:checked ~ .filter-body .filter-item:not([data-tag~="tag-s"]),
+.filter .filter-tag#tag-t:checked ~ .filter-body .filter-item:not([data-tag~="tag-t"]),
+.filter .filter-tag#tag-u:checked ~ .filter-body .filter-item:not([data-tag~="tag-u"]),
+.filter .filter-tag#tag-v:checked ~ .filter-body .filter-item:not([data-tag~="tag-v"]),
+.filter .filter-tag#tag-w:checked ~ .filter-body .filter-item:not([data-tag~="tag-w"]),
+.filter .filter-tag#tag-x:checked ~ .filter-body .filter-item:not([data-tag~="tag-x"]),
+.filter .filter-tag#tag-y:checked ~ .filter-body .filter-item:not([data-tag~="tag-y"]),
+.filter .filter-tag#tag-z:checked ~ .filter-body .filter-item:not([data-tag~="tag-z"]),
+.filter .filter-tag#tag-1:checked ~ .filter-body .filter-item:not([data-tag~="tag-1"]),
+.filter .filter-tag#tag-2:checked ~ .filter-body .filter-item:not([data-tag~="tag-2"]),
+.filter .filter-tag#tag-3:checked ~ .filter-body .filter-item:not([data-tag~="tag-3"]),
+.filter .filter-tag#tag-4:checked ~ .filter-body .filter-item:not([data-tag~="tag-4"]),
+.filter .filter-tag#tag-5:checked ~ .filter-body .filter-item:not([data-tag~="tag-5"]),
+.filter .filter-tag#tag-6:checked ~ .filter-body .filter-item:not([data-tag~="tag-6"]),
+.filter .filter-tag#tag-7:checked ~ .filter-body .filter-item:not([data-tag~="tag-7"]),
+.filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~="tag-8"]),
+.filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~="tag-9"]) {
+  display: none;
+}
+
+.filter .filter-nav {
+  margin: .4rem 0;
+}
+
+.filter .filter-body {
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
