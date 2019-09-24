@@ -6,10 +6,6 @@
 	devsec.css version: v0.0.1
 */
 
-
-/*
-	color definition
-*/
 :root {
 	/* color */
 	--black: #111111; /* noir */
@@ -23,111 +19,110 @@
 
 	/* Browsers resets and base typography.*/
 	/* Core module CSS variable definitions */
-	--fore-color: #fdfdfd;
-	--secondary-fore-color: #f0f0f0;
-	--back-color: #111;
-	--secondary-back-color: #222;
-	--blockquote-color: #f57c00;
-	--pre-color: #1565c0;
-	--border-color: #ddd;
-	--secondary-border-color: #aaa;
+	--fore-color: var(--white);
+	--secondary-fore-color: var(--white);
+	--back-color: var(--black);
+	--secondary-back-color: var(--black);
+	--blockquote-color: var(--warning);
+	--pre-color: var(--blue);
+	--border-color: var(--white);
+	--secondary-border-color: var(--grey);
 	--heading-ratio: 1.19;
 	--universal-margin: 0.5rem;
 	--universal-padding: 0.5rem;
 	--universal-border-radius: 0.125rem;
-	--a-link-color: #0277bd;
-	--a-visited-color: #01579b;
+	--a-link-color: var(--pink);
+	--a-visited-color: var(--green);
 
 	/* Card component CSS variable definitions */
-	--card-back-color: #111;
-	--card-fore-color: #fdfdfd;
-	--card-border-color: #aaa;
+	--card-back-color: var(--black);
+	--card-fore-color: var(--white);
+	--card-border-color: var(--grey);
 
 	/* Definitions for forms and input elements.*/
 	/* Input_control module CSS variable definitions */
-	--form-back-color: #222;
-	--form-fore-color: #fdfdfd;
-	--form-border-color: #aaa;
-	--input-back-color: #111;
-	--input-fore-color: #fdfdfd;
-	--input-border-color: #aaa;
-	--input-focus-color: #0288d1;
-	--input-invalid-color: #d32f2f;
-	--button-back-color: #212121;
-	--button-hover-back-color: #444;
-	--button-fore-color: #e2e2e2;
+	--form-back-color: var(--black);
+	--form-fore-color: var(--white);
+	--form-border-color: var(--grey);
+	--input-back-color: var(--black);
+	--input-fore-color: var(--white);
+	--input-border-color: var(--grey);
+	--input-focus-color: var(--blue);
+	--input-invalid-color: var(--error);
+	--button-back-color: var(--black);
+	--button-hover-back-color: var(--grey);
+	--button-fore-color: var(--white);
 	--button-border-color: transparent;
 	--button-hover-border-color: transparent;
 	--button-group-border-color: rgba(124, 124, 124, 0.54);
 
 	/* Definitions for navigation elements.*/
 	/* Navigation module CSS variable definitions */
-	--header-back-color: #111;
-	--header-hover-back-color: #222;
-	--header-fore-color: #f0f0f0;
-	--header-border-color: #aaa;
-	--nav-back-color: #111;
-	--nav-hover-back-color: #222;
-	--nav-fore-color: #f0f0f0;
-	--nav-border-color: #aaa;
-	--nav-link-color: #0277bd;
-	--footer-fore-color: #f0f0f0;
-	--footer-back-color: #111;
-	--footer-border-color: #aaa;
-	--footer-link-color: #0277bd;
-	--drawer-back-color: #111;
-	--drawer-hover-back-color: #222;
-	--drawer-border-color: #aaa;
-	--drawer-close-color: #f0f0f0;
+	--header-back-color: var(--black);
+	--header-hover-back-color: var(--black);
+	--header-fore-color: var(--white);
+	--header-border-color: var(--white);
+	--nav-back-color: var(--black);
+	--nav-hover-back-color: var(--black);
+	--nav-fore-color: var(--white);
+	--nav-border-color: var(--grey);
+	--nav-link-color: var(--blue);
+	--footer-fore-color: var(--white);
+	--footer-back-color: var(--black);
+	--footer-border-color: var(--grey);
+	--footer-link-color: var(--blue);
+	--drawer-back-color: var(--black);
+	--drawer-hover-back-color: var(--black);
+	--drawer-border-color: var(--grey);
+	--drawer-close-color: var(--white);
 
 	/* Definitions for the responsive table component.*/
 	/* Table module CSS variable definitions. */
-	--table-border-color: #ddd;
-	--table-border-separator-color: #666;
-	--table-head-back-color: #212121;
-	--table-head-fore-color: #fdfdfd;
-	--table-body-back-color: #111;
-	--table-body-fore-color: #fdfdfd;
-	--table-body-alt-back-color: #444;
+	--table-border-color: var(--grey);
+	--table-border-separator-color: var(--grey);
+	--table-head-back-color: var(--black);
+	--table-head-fore-color: var(--white);
+	--table-body-back-color: var(--black);
+	--table-body-fore-color: var(--white);
+	--table-body-alt-back-color: var(--black);
 
-	--table-body-alt-back-color: #444;
+	--table-body-alt-back-color: var(--black);
 
-	--table-body-hover-back-color: #5c819f;
+	--table-body-hover-back-color: var(--grey);
 
-/* Definitions for contextual background elements, toasts and tooltips.*/
-/* Contextual module CSS variable definitions */
-	--mark-back-color: #0277bd;
-	--mark-fore-color: #fafafa;
+	/* Definitions for contextual background elements, toasts and tooltips.*/
+	/* Contextual module CSS variable definitions */
+	--mark-back-color: var(--blue);
+	--mark-fore-color: var(--white);
 
-	--toast-back-color: #424242;
-	--toast-fore-color: #fafafa;
+	--toast-back-color: var(--black);
+	--toast-fore-color: var(--white);
 
-	--tooltip-back-color: #fafafa;
-	--tooltip-fore-color: #212121;
+	--tooltip-back-color: var(--white);
+	--tooltip-fore-color: var(--black);
 
 	--modal-overlay-color: rgba(0, 0, 0, 0.45);
-	--modal-close-color: #f0f0f0;
-	--modal-close-hover-color: #222;
+	--modal-close-color: var(--white);
+	--modal-close-hover-color: var(--black);
 
-	--collapse-label-back-color: #111;
-	--collapse-label-fore-color: #fafafa;
-	--collapse-label-hover-back-color: #222;
-	--collapse-selected-label-back-color: #444;
-	--collapse-border-color: #aaa;
-	--collapse-content-back-color: #212121;
-	--collapse-selected-label-border-color: #0277bd;
+	--collapse-label-back-color: var(--black);
+	--collapse-label-fore-color: var(--white);
+	--collapse-label-hover-back-color: var(--black);
+	--collapse-selected-label-back-color: var(--grey);
+	--collapse-border-color: var(--grey);
+	--collapse-content-back-color: var(--black);
+	--collapse-selected-label-border-color: var(--blue);
 
 	/* Definitions for progress elements and spinners.*/
 	/* Progess module CSS variable definitions */
-	--progress-back-color: #aaa;
-	--progress-fore-color: #555;
+	--progress-back-color: var(--grey);
+	--progress-fore-color: var(--grey);
 
-	--spinner-back-color: #ddd;
-	--spinner-fore-color: #555;
+	--spinner-back-color: var(--white);
+	--spinner-fore-color: var(--grey);
 
-/* Definitions for utilities and helper classes.*/
-/* Utility module CSS variable definitions */
-
+	/* Definitions for utilities and helper classes.*/
+	/* Utility module CSS variable definitions */
 	--generic-border-color: rgba(0, 0, 0, 0.3);
 	--generic-box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.125), 0 0.125rem 0.125rem -0.125rem rgba(0, 0, 0, 0.125);
 }
