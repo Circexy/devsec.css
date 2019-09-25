@@ -27,7 +27,7 @@
 	--pink: #FF1493; /* rose */
 	--green: #32CD32; /* vert */
 	--warning: #fad232; /* jaune warning */
-	--error: #dd514c; /* rouge error */
+	--error: #f22f21; /* rouge error */
 
 	/* Browsers resets and base typography.*/
 	/* Core module CSS variable definitions */
@@ -842,7 +842,12 @@ a:hover, a:focus {
 
 .card > .section.dark {
 	--card-back-color: #e0e0e0;
-	--card-fore-color: #111;
+	color: var(--black);
+}
+
+.card>.section.darker {
+	background: #bdbdbd;
+	color: var(--black);
 }
 
 .card > .section.double-padded {
@@ -853,7 +858,7 @@ a:hover, a:focus {
 /* Input_control module CSS variable definitions */
 form {
 	margin: var(--universal-margin);
-    width: calc(100% - 2 * var(--universal-margin));
+	width: calc(100% - 2 * var(--universal-margin));
 }
 
 fieldset {
@@ -1305,29 +1310,29 @@ footer.sticky {
 
 /* btn close */
 .close {
-    display: inline-block;
-    width: 1.5rem;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    line-height: 1;
-    font-weight: 700;
-    border-radius: 2rem;
-    background: var(--grey);
-    vertical-align: top;
-    cursor: pointer;
-    transition: background 0.3s
+	display: inline-block;
+	width: 1.5rem;
+	font-family: sans-serif;
+	font-size: 1.5rem;
+	line-height: 1;
+	font-weight: 700;
+	border-radius: 2rem;
+	background: var(--grey);
+	vertical-align: top;
+	cursor: pointer;
+	transition: background 0.3s
 }
 
 .close:hover,
 .close:focus {
-    background: var(--grey);
-    border: 1px solid var(--blue);
+	background: var(--grey);
+	border: 1px solid var(--blue);
 }
 
 .close:before {
-    content: "\00D7";
-    display: block;
-    text-align: center
+	content: "\00D7";
+	display: block;
+	text-align: center
 }
 
 /* Definitions for the responsive table component. */
@@ -1337,7 +1342,7 @@ footer.sticky {
 	border-spacing: 0;
 	text-align: left; 
 	margin: var(--universal-margin);
-    width: calc(100% - 2 * var(--universal-margin));
+	width: calc(100% - 2 * var(--universal-margin));
 }
 
 .table.table-striped tbody tr:nth-of-type(odd) {
@@ -1470,14 +1475,14 @@ mark.inline-block {
 }
 
 #modal-check {
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
 }
 
 [type="checkbox"].modal {
@@ -1548,40 +1553,40 @@ mark.inline-block {
 
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.45)
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.45)
 }
 
 .modal .card {
-    margin: 0 auto;
-    max-height: 50vh;
-    overflow: auto
+	margin: 0 auto;
+	max-height: 50vh;
+	overflow: auto
 }
 
 .modal .card .close {
-    position: absolute;
-    top: .75rem;
-    right: .25rem;
-    padding: 0
+	position: absolute;
+	top: .75rem;
+	right: .25rem;
+	padding: 0
 }
 
 :checked+.modal {
-    display: -webkit-box;
-    -webkit-box-flex: 0;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex: 0 1 auto;
-    flex: 0 1 auto;
-    z-index: 1200
+	display: -webkit-box;
+	-webkit-box-flex: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex: 0 1 auto;
+	flex: 0 1 auto;
+	z-index: 1200
 }
 
 :checked+.modal .card .close {
-    z-index: 1211
+	z-index: 1211
 }
 
 
@@ -1759,123 +1764,123 @@ progress.tertiary {
 }
 
 @-webkit-keyframes spinner-donut-anim {
-    0% {
-        -webkit-transform: rotate(0deg)
-    }
-    100% {
-        -webkit-transform: rotate(360deg)
-    }
+	0% {
+		-webkit-transform: rotate(0deg)
+	}
+	100% {
+		-webkit-transform: rotate(360deg)
+	}
 }
 
 @keyframes spinner-donut-anim {
-    0% {
-        transform: rotate(0deg)
-    }
-    100% {
-        transform: rotate(360deg)
-    }
+	0% {
+		transform: rotate(0deg)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
 }
 
 .spinner-donut {
-    display: inline-block;
-    border: .25rem solid #e3f2fd;
-    border-left: .25rem solid #1565c0;
-    border-radius: 50%;
-    width: 1.25rem;
-    height: 1.25rem;
-    -webkit-animation: spinner-donut-anim 1.2s linear infinite;
-    animation: spinner-donut-anim 1.2s linear infinite
+	display: inline-block;
+	border: .25rem solid #e3f2fd;
+	border-left: .25rem solid #1565c0;
+	border-radius: 50%;
+	width: 1.25rem;
+	height: 1.25rem;
+	-webkit-animation: spinner-donut-anim 1.2s linear infinite;
+	animation: spinner-donut-anim 1.2s linear infinite
 }
 
 .spinner-donut.primary {
-    border: .25rem solid #ffebee;
-    border-left: .25rem solid var(--blue);
+	border: .25rem solid #ffebee;
+	border-left: .25rem solid var(--blue);
 }
 
 .spinner-donut.secondary {
-    border: .25rem solid #ffebee;
-    border-left: .25rem solid var(--pink);
+	border: .25rem solid #ffebee;
+	border-left: .25rem solid var(--pink);
 }
 
 .spinner-donut.tertiary {
-    border: .25rem solid #e8f5e9;
-    border-left: .25rem solid var(--green);
+	border: .25rem solid #e8f5e9;
+	border-left: .25rem solid var(--green);
 }
 
 .spinner-donut.large {
-    border-width: .375rem;
-    width: 2rem;
-    height: 2rem
+	border-width: .375rem;
+	width: 2rem;
+	height: 2rem
 }
 
 /* drawer */
 .drawer-toggle:before {
-    position: relative;
-    top: .4375rem;
-    font-family: sans-serif;
-    font-size: 2.5rem;
-    line-height: .125;
-    content: '\2261'
+	position: relative;
+	top: .4375rem;
+	font-family: sans-serif;
+	font-size: 2.5rem;
+	line-height: .125;
+	content: '\2261'
 }
 
 .drawer {
-    display: block;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    width: 320px;
-    height: 100vh;
-    overflow-y: auto;
-    background: var(--back-color);
-    border: .0625rem solid #c9c9c9;
-    margin: 0;
-    z-index: 1110
+	display: block;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	width: 320px;
+	height: 100vh;
+	overflow-y: auto;
+	background: var(--back-color);
+	border: .0625rem solid #c9c9c9;
+	margin: 0;
+	z-index: 1110
 }
 
 .drawer:not(.right) {
-    left: -320px;
-    transition: left 0.3s
+	left: -320px;
+	transition: left 0.3s
 }
 
 .drawer.right {
-    right: -320px;
-    transition: right 0.3s
+	right: -320px;
+	transition: right 0.3s
 }
 
 .drawer .close {
-    position: absolute;
-    top: .75rem;
-    right: .25rem;
-    z-index: 1111;
-    padding: 0
+	position: absolute;
+	top: .75rem;
+	right: .25rem;
+	z-index: 1111;
+	padding: 0
 }
 
 @media screen and (max-width: 320px) {
-    .drawer {
-        width: 100%
-    }
+	.drawer {
+		width: 100%
+	}
 }
 
 @media screen and (min-width: 768px) {
-    .drawer:not(.persistent) {
-        position: static;
-        height: 100%;
-        z-index: 1100
-    }
-    .drawer:not(.persistent) .close {
-        display: none
-    }
-    .drawer-toggle:not(.persistent) {
-        display: none
-    }
+	.drawer:not(.persistent) {
+		position: static;
+		height: 100%;
+		z-index: 1100
+	}
+	.drawer:not(.persistent) .close {
+		display: none
+	}
+	.drawer-toggle:not(.persistent) {
+		display: none
+	}
 }
 
 :checked+.drawer:not(.right) {
-    left: 0
+	left: 0
 }
 
 :checked+.drawer.right {
-    right: 0
+	right: 0
 }
 
 #demo-toggle {
@@ -2008,65 +2013,85 @@ span.icon-user {
 	display: none !important;
 }
 
+.bg-primary{
+	background-color: var(--blue);
+}
+
+.bg-secondary{
+	background-color: var(--pink);
+}
+
+.bg-tertiary{
+	background-color: var(--green);
+}
+
+.bg-warning{
+	background-color: var(--warning);
+}
+
+.bg-error{
+	background-color: var(--error);
+}
+
 /* breadcrumb */
 ul.breadcrumbs {
 	color: var(--pink);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    list-style: none;
-    margin: var(--universal-margin);
-    width: calc(100% - 2 * var(--universal-margin));
-    padding: 0
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	list-style: none;
+	margin: var(--universal-margin);
+	width: calc(100% - 2 * var(--universal-margin));
+	padding: 0
 }
 
 ul.breadcrumbs li {
-    -webkit-box-flex: 1;
-    max-width: 100%;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    position: relative;
-    text-align: center;
-    background: var(--grey);
-    height: 2rem;
-    line-height: 2rem;
-    margin-right: 1.125rem
+	-webkit-box-flex: 1;
+	max-width: 100%;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	-webkit-flex-basis: 0;
+	flex-basis: 0;
+	position: relative;
+	text-align: center;
+	background: var(--grey);
+	height: 2rem;
+	line-height: 2rem;
+	margin-right: 1.125rem
 }
 
 ul.breadcrumbs li:before,
 ul.breadcrumbs li:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border: 0 solid var(--grey);
-    border-width: 1rem 1rem
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+	border: 0 solid var(--grey);
+	border-width: 1rem 1rem
 }
 
 ul.breadcrumbs li:before {
-    left: -1rem;
-    border-left-color: transparent
+	left: -1rem;
+	border-left-color: transparent
 }
 
 ul.breadcrumbs li:after {
-    left: 100%;
-    border-color: transparent;
-    border-left-color: var(--grey);
+	left: 100%;
+	border-color: transparent;
+	border-left-color: var(--grey);
 }
 
 ul.breadcrumbs li:first-child:before {
-    border: 0
+	border: 0
 }
 
 ul.breadcrumbs li:last-child {
-    margin-right: 0
+	margin-right: 0
 }
 
 ul.breadcrumbs li:last-child:after {
-    border: 0
+	border: 0
 }
 
 /* easterEgg */
@@ -2093,7 +2118,7 @@ ul.breadcrumbs li:last-child:after {
 .tabs {
 	/*width: 100%;*/
 	margin: var(--universal-margin);
-    width: calc(100% - 2 * var(--universal-margin));
+	width: calc(100% - 2 * var(--universal-margin));
 	opacity: 1;
 	display: -webkit-box;
 	-webkit-box-pack: justify;
@@ -2454,4 +2479,30 @@ ul.breadcrumbs li:last-child:after {
 	display: -ms-flexbox;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+/* hero (spectre) */
+.hero {
+	display: flex;
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+}
+
+.hero.hero-sm {
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+.hero.hero-lg {
+	padding-bottom: 8rem;
+	padding-top: 8rem;
+}
+
+.hero .hero-body {
+	padding: .4rem;
 }
