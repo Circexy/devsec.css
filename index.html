@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" href="inc/css/style.css">
+		<link rel="stylesheet" href="inc/css/docs.css">
+
+		<title>mini.css - Minimal, responsive, style-agnostic CSS framework</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites.">
+		<meta name="keywords" content="mini, mini.css, CSS, framework, minimal, responsive, style-agnostic, front-end, frontend, Sass, toolkit">
+		<meta name="author" content="Angelos Chalaris (chalarangelo)">
+		
+		<meta property="og:title" content="mini.css - Minimal, responsive, style-agnostic CSS framework">
+		<meta property="og:description" content="mini.css is a tiny CSS framework designed to build quick, modern and responsive websites."/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="inc/pics/page_thumb.png">
+		<meta property="og:url" content="https://chalarangelo.github.io/mini.css/">
+		<link rel="icon" type="image/png" href="inc/pics/favicon.png">
+	</head>
+
+	<body>
+		<div class="index-splash">
+			<div class="index-splash-image no-filter"></div>
+			<div class="index-splash-image"></div>
+
+			<h1 class="splash">mini<small>.css</small></h1>
+			<p class="splash">minimal, responsive, style-agnostic <br>CSS framework <br><mark class="secondary">secondary highlight</mark></p>
+
+			<p id="version-info">v3.0.1</p>
+			<a class="button splash-button splash-primary" href="docs">Get started</a>
+			<a class="button splash-button splash-secondary" href="docs">Get started</a>
+			<a class="button splash-button splash-tertiary" href="docs">Get started</a>
+		</div>
+
+		<header class="row sticky">
+			<span class="col-md-1 col-lg-2"></span>
+			<span class="logo col-sm-3 col-md">mini.css</span>
+			<a class="button col-sm col-md" href="docs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 20px; vertical-align: text-top;">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				<span>&nbsp;Docs</span>
+			</a>
+			<a class="button col-sm col-md" href="https://github.com/Chalarangelo/mini.css" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 20px; vertical-align: text-top;">
+					<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+				</svg>
+				<span>&nbsp;Github</span>
+			</a>
+			<a class="button col-sm col-md" href="flavors">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 20px; vertical-align: text-top;">
+					<path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+					<polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+				</svg>
+				<span>&nbsp;Flavors</span>
+			</a>
+			<span class="col-md-1 col-lg-2"></span>
+		</header>
+
+		<div class="row padded">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<img src="inc/pics/responsive.svg" class="feature-image">
+				<h2 class="feature-header">Fast and Responsive</h2>
+				<br>
+				<p>Want to build websites that look beautiful on any and all devices, but also load fast on mobile connections? Then <strong>mini.css</strong> is the right tool for you! Its tiny size (under 10KB gzipped), along with its <strong>responsive grid</strong> and modern components ensures that all your users are satisfied and can access your website anytime, anywhere. Bridging the gap between fully-featured frameworks (e.g. Bootstrap and Semantic UI) and micro frameworks (e.g. Milligram and Pure.CSS), <strong>mini.css</strong> packs a lot of features in a small package, while it relies solely on CSS, meaning you do not have to worry about any conflicts with other Javascript libraries you might be using.</p>
+			</div>
+		</div>
+
+		<div class="row padded alt-back">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<img src="inc/pics/tailored.svg" class="feature-image">
+				<h2 class="feature-header">Tailored to Your Needs</h2>
+				<br>
+				<p>Creating a CSS framework that caters to everyone's needs is no easy task, but <strong>mini.css</strong> manages to rise to the occasion by providing extensive and coherent documentation in combination with templates, examples and semantic HTML5 markup. Modern UX patterns and accessibility guidelines are well-documented and can be used out of the box, using one of the unique <strong>flavors</strong> that the framework provides. If you still want more, you can create your own custom flavor or tweak an existing one just by opening its CSS file and changing a few custom properties. It's that simple! </p>
+			</div>
+		</div>
+
+		<div class="row padded primary-section">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<h2 class="feature-header">Get started now!</h2>
+				<br>
+				<p>Head over to the <a href="docs">documentation</a> to learn how to get started using <strong>mini.css</strong>, as well as what flavors and components are availble and how to use them to create the website or web app you've always wanted. If you like the framework and want to support it, remember to to star it on Github. It means a lot to us and it only takes a couple of seconds!</p>
+				<p style="text-align:center;"><a href="docs" class="button">Get started</a></p>
+				<a href="https://github.com/Chalarangelo/mini.css" target="_blank" class="centered">mini.css on Github</a>
+			</div>
+		</div>
+
+
+		<!-- exemple -->
+		<!-- menu -->
+		<header>
+			<a href="#" class="logo">Logo</a>
+			<button class="pHacked">Home<span class="blink">_</span></button>
+			<a href="#" class="button">News</a>
+			<span>|</span>
+			<button>About</button>
+			<a href="#" role="button">Contact</a>
+		</header>
+
+		<!-- drawer -- side menu -->
+		<header>
+			<label for="demo-toggle" class="button drawer-toggle persistent"></label>
+		</header>
+
+		<input type="checkbox" id="demo-toggle">
+
+		<nav class="drawer demo persistent">
+			<label for="demo-toggle" class="close"></label>
+			<a href="#">Home</a>
+			<span>News</span>
+			<a href="#" class="sublink-1">New Courses</a>
+			<a href="#" class="sublink-1">Certifications</a>
+			<span class="sublink-1">Events</span>
+			<a href="#" class="sublink-2">Course Showcase - 12th, Dec</a>
+			<a href="#" class="sublink-2">Staff AMA - 16th, Dec</a>
+			<a href="#" class="sublink-1">Policy Update</a>
+			<a href="#">About</a> <a href="#">Contact</a>
+			<br>
+		</nav>
+
+
+
+
+
+
+
+
+
+
+		<!-- breadcrumb -->
+		<ul class="breadcrumbs">
+			<li><a href="#">Root</a></li>
+			<li><a href="#">Folder</a></li>
+			<li>File</li>
+		</ul>
+
+		<!-- progress bar -->
+		<progress value="100" max="1000"></progress>
+		<progress class="secondary" value="450" max="1000"></progress>
+		<progress class="tertiary" value="1000" max="1000"></progress>
+
+		<!-- spinner -->
+		<div class="spinner-donut"></div>
+		<div class="spinner-donut secondary"></div>
+		<div class="spinner-donut tertiary"></div>
+		<div class="spinner-donut large"></div>
+
+		<!-- easterEgg -->
+		<form id="easterForm">
+			<input id="easterEgg" type="text" name="easterEgg" placeholder="it's time to kick ass and chew bubblegum">
+		</form>
+
+		<!-- modal -->
+		<label class="button primary large" for="modal-check">Click to display a modal dialog</label>
+		<br>
+
+		<input id="modal-check" type="checkbox">
+		<div class="modal" style="text-align:initial">
+			<div class="card">
+				<label for="modal-check" class="close"></label>
+				<h3 class="section double-padded">Modal</h3>
+				<div class="section double-padded">
+					<p>This is a modal window!</p>
+					<label class="button primary" for="modal-check">Close modal</label>
+				</div>
+			</div>
+		</div>
+		
+		<!-- collapse -->
+		<div class="collapse">
+			<input type="checkbox" id="collapse-section1" checked aria-hidden="true">
+			<label for="collapse-section1" aria-hidden="true">Collapse section 1</label>
+			<div>
+				<p>This is the first section of the collapse</p>
+			</div>
+
+			<input type="checkbox" id="collapse-section2" aria-hidden="true">
+			<label for="collapse-section2" aria-hidden="true">Collapse section 2</label>
+			<div>
+				<p>This is the second section of the collapse</p>
+			</div>
+		</div>
+
+		<!-- nav -->
+		<nav>
+			<a href="#">Home</a>
+			<span>News</span>
+			<a href="#" class="sublink-1">New Courses</a>
+			<a href="#" class="sublink-1">Certifications</a>
+			<span class="sublink-1">Events</span>
+			<a href="#" class="sublink-2">Course Showcase - 12th, Dec</a>
+			<a href="#" class="sublink-2">Staff AMA - 16th, Dec</a>
+			<a href="#" class="sublink-1">Policy Update</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+		</nav>
+
+		<!-- tab -->
+		<div class="tabs">
+			<input type="radio" name="tab-group" id="tab1" checked aria-hidden="true">
+			<label for="tab1" aria-hidden="true">Tab 1</label>
+			<div>
+				<h3>Tab 1</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla at eros ac accumsan. Vestibulum semper ante ultricies lorem ultricies, fringilla lobortis nisl egestas. Praesent vitae vehicula purus, at vehicula justo. Sed erat dolor, dictum id gravida quis, aliquam non mi. Maecenas pulvinar malesuada mi id dignissim. Vestibulum pulvinar, lectus condimentum convallis maximus, ante erat viverra urna, non scelerisque leo libero in ligula. Proin a sem sed arcu efficitur gravida nec id elit. Nullam neque ipsum, malesuada ac consectetur eu, fermentum quis ex. Morbi laoreet ornare ante ac maximus. Vivamus tempor enim lacus, vel sodales velit condimentum ac. Morbi luctus lorem ut est dapibus pharetra. Proin a malesuada nibh. Quisque fermentum, justo non cursus iaculis, velit urna mattis turpis, ut dapibus eros nisl non est. Etiam tincidunt odio id tortor tincidunt, sed condimentum metus volutpat.
+
+					Etiam at lacus sit amet nisi ultrices finibus. Quisque feugiat lacinia sapien, sed euismod mi auctor sit amet. Fusce tincidunt ullamcorper tellus, a convallis metus cursus sit amet. Ut rutrum euismod justo ut elementum. Donec dolor risus, ultrices ut lacinia non, malesuada eget lacus. Sed faucibus eros sit amet lectus imperdiet mollis. Phasellus convallis tellus tortor, ac eleifend purus tincidunt et. Proin ultricies condimentum molestie. Suspendisse quis nunc et quam dignissim faucibus. Phasellus auctor odio orci, non blandit metus vestibulum in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc justo nunc, facilisis eget nisl vitae, scelerisque tincidunt felis. Etiam enim sem, porttitor iaculis consequat non, scelerisque quis massa. Nam at pulvinar mi. Aenean ipsum neque, tempus at nunc at, ornare fermentum nunc.
+
+					Morbi consectetur, quam ultricies pellentesque faucibus, nisl risus molestie diam, nec tempus eros orci ut lacus. Aliquam mollis imperdiet blandit. Aliquam nec tellus imperdiet, vulputate lorem vel, hendrerit erat. Donec non sem et dui maximus tristique. Nulla eleifend egestas faucibus. Suspendisse in lacus eget velit congue tristique sit amet sed velit. Fusce faucibus enim et mauris consectetur semper. Aenean lacinia id dui id rhoncus. Donec eleifend accumsan quam, vel dignissim sapien venenatis ac. Aliquam erat volutpat. Maecenas posuere urna eu sapien convallis tempus. Vestibulum ac lectus dapibus, auctor magna id, porttitor ex. Morbi leo diam, imperdiet eget odio nec, volutpat cursus justo.
+
+					Cras eget porta dolor, eu euismod libero. Suspendisse volutpat pretium orci vitae malesuada. Nunc quis erat in tortor porttitor semper. Nulla placerat tristique leo nec ultricies. Aliquam eu mi vitae libero porttitor mollis sed et ipsum. Integer tempus arcu nec sapien dignissim, auctor blandit nisl egestas. In sit amet est pulvinar libero aliquam faucibus. Mauris ac ex enim. Nam tincidunt erat quam. Cras posuere ex quis malesuada vehicula. Donec ut scelerisque massa, vitae mollis enim. Maecenas tincidunt lectus id fermentum hendrerit. Integer mollis condimentum laoreet.
+
+					Nam sit amet libero in lectus ullamcorper tempus. Nullam efficitur sodales risus sit amet suscipit. Nunc efficitur faucibus quam lacinia aliquet. Maecenas a fermentum lectus. Vivamus cursus placerat mauris, et vestibulum lacus tempus sit amet. Curabitur quam dolor, rutrum in leo quis, rutrum malesuada nunc. Nam ligula odio, maximus in rutrum sed, condimentum vel tortor. Donec mollis, metus gravida feugiat volutpat, urna lacus ullamcorper felis, mattis fermentum leo lorem quis risus. Donec malesuada bibendum ante in gravida. Curabitur malesuada nisi efficitur ante volutpat, id porta sem viverra. Fusce vel purus sed nisl consectetur finibus. Phasellus ultrices ex sed mattis sagittis.
+				</p>
+			</div>
+
+			<input type="radio" name="tab-group" id="tab2" aria-hidden="true">
+			<label for="tab2" aria-hidden="true">Tab 2</label>
+			<div>
+				<h3>Tab 2</h3>
+				<p>This is the second tab's content.</p>
+			</div>
+
+			<input type="radio" name="tab-group" id="tab3" aria-hidden="true">
+			<label for="tab3" aria-hidden="true">Tab 3</label>
+			<div>
+				<h3>Tab 3</h3>
+				<p>This is the third tab's content.</p>
+			</div>
+		</div>
+
+		<!-- stacked tabs -->
+		<div class="tabs stacked">
+			<input type="radio" name="accordion" id="a1" checked aria-hidden="true">
+			<label for="a1" aria-hidden="true">Accordion section 1</label>
+			<div>
+				<h3>Section 1</h3>
+				<p>This is the first accordion section's content.</p>
+			</div>
+
+			<input type="radio" name="accordion" id="a2"aria-hidden="true">
+			<label for="a2" aria-hidden="true">Accordion section 2</label>
+			<div>
+				<h3>Section 2</h3>
+				<p>This is the second accordion section's content.</p>
+			</div>
+		</div>
+
+		<div class="tabs stacked">
+		  <input type="checkbox" id="c1" aria-hidden="true">
+		  <label for="c1" aria-hidden="true">Collapse section 1</label>
+		  <div>
+			<p>This is the first collapse section's content.</p>
+		  </div>
+		  <input type="checkbox" id="c2" aria-hidden="true">
+		  <label for="c2" aria-hidden="true">Collapse section 2</label>
+		  <div>
+			<p>This is the second collapse section's content.</p>
+		  </div>
+		</div>
+		
+		<p>This <mark>is</mark> a <mark class="secondary">secondary highlight</mark> and this is a <mark class="tertiary">tertiary highlight</mark>.</p>
+
+		<h3>spectre table</h3>
+
+		<table class="table">
+		  <thead>
+			<tr>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+		  </tbody>
+		</table>
+		<br>
+
+		<h3>spectre striped & hover</h3>
+
+		<table class="table table-striped table-hover">
+		  <thead>
+			<tr>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+		  </tbody>
+		</table>
+		<br>
+
+		<h3>table scroll horizontal</h3>
+
+		<table class="table table-scroll">
+		  <thead>
+			<tr>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			  <th>name</th>
+			  <th>genre</th>
+			  <th>release date</th>
+			</tr>
+		  </thead>
+
+		  <tbody>
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+
+			<tr class="">
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			  <td>The Shawshank Redemption</td>
+			  <td>Crime, Drama</td>
+			  <td>14 October 1994</td>
+			</tr>
+		  </tbody>
+		</table>
+		<br>
+
+		<!-- mini button -->
+		<button>Button</button>
+		<input type="button" value="Button" />
+		<input type="reset" value="Button" />
+		<input type="submit" value="Button" />
+		<a href="#" class="button">Link</a>
+		<a href="#" role="button">Link</a>
+		<label class="button">Label</label>
+		<label role="button">Label</label>
+		<br>
+		
+		<button class="primary">Primary</button>
+		<button class="secondary">Secondary</button>
+		<button class="tertiary">Tertiary</button>
+		<button class="inverse">Inverse</button>
+
+		<div class="button-group">
+			<button>Button</button>
+			<button>Button</button>
+			<button>Button</button>
+		</div>
+
+		<a class="button splash-primary" href="docs">Get started</a>
+		<a class="button splash-secondary" href="docs">Get started</a>
+		<a class="button splash-tertiary" href="docs">Get started</a>
+		<br>
+		
+		<button disabled>disabled</button>
+		
+		<!-- spectre forms -->
+		<form>
+		  <fieldset>
+			<legend>Simple form</legend>
+			<label for="username">Username</label>
+			<input type="text" id="Username" placeholder="Username"/>
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="Password"/>
+		  </fieldset>
+		</form>
+		
+		<div class="form-group">
+		  <label class="form-label" for="input-example-1">Name</label>
+		  <input class="form-input" type="text" id="input-example-1" placeholder="Name">
+		</div>
+		
+		<div class="form-group">
+		  <select class="form-select">
+			<option>Choose an option</option>
+			<option>Slack</option>
+			<option>Skype</option>
+			<option>Hipchat</option>
+		  </select>
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label">Gender</label>
+		  <label class="form-radio">
+			<input type="radio" name="gender" checked>
+			<i class="form-icon"></i> Male
+		  </label>
+		  <label class="form-radio">
+			<input type="radio" name="gender">
+			<i class="form-icon"></i> Female
+		  </label>
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-switch">
+			<input type="checkbox">
+			<i class="form-icon"></i> Send me emails with news and tips
+		  </label>
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-checkbox">
+			<input type="checkbox">
+			<i class="form-icon"></i> Remember me
+		  </label>
+		</div>
+			   
+		<!-- mini grid -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					test
+				</div>
+				<div class="col-sm-6">
+					test
+				</div>
+			</div>
+		</div>
+
+		poulet1
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1">eqf</div>  <div class="col-sm-11">esf</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-2">ef</div>  <div class="col-sm-10">ef</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">txfh</div>  <div class="col-sm-9">xth</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">txh</div>  <div class="col-sm-8">txdh</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-5">xth</div>  <div class="col-sm-7">xth</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">xth</div>  <div class="col-sm-6">xth</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">xth</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm">xth</div>  <div class="col-sm">xth</div>
+			</div>
+		</div>
+		poulet2
+		
+		<!-- mini normalize -->
+		<h2>titre</h2>
+		
+		<hr>
+		
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at orci et lorem mollis semper. Sed eget eleifend lectus. Maecenas condimentum consectetur massa, eu molestie nisl. Pellentesque placerat dapibus urna vitae scelerisque. Nunc pretium sodales nibh, non vestibulum orci. Mauris at lacus eu arcu dignissim bibendum id id justo. Mauris at placerat nunc. Nulla ornare leo sit amet consequat tincidunt. Aenean sollicitudin turpis quis sem elementum iaculis eu vitae tellus. Maecenas sed finibus neque. In in ipsum convallis, porttitor ipsum quis, tempor urna. Vivamus pharetra, massa sed elementum blandit, risus mauris pellentesque risus, vitae mollis est elit nec odio. Sed ligula mauris, fermentum vel rutrum quis, auctor sit amet erat. In eu ante nec dolor fringilla vehicula sed quis dolor.
+
+			Sed feugiat tellus turpis, id congue ligula feugiat id. Etiam id massa vel elit vestibulum egestas. Ut nec nulla tellus. Pellentesque lacinia ipsum ac velit bibendum condimentum. Mauris et sollicitudin velit, vel dignissim quam. Ut consequat orci turpis, sed euismod metus ornare a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut posuere sem nec felis laoreet, vehicula euismod velit tincidunt. Nunc mattis pulvinar nisi, sed consectetur arcu pellentesque in. Quisque in finibus turpis, in tincidunt est.
+
+			Nullam egestas rhoncus bibendum. Pellentesque tristique cursus venenatis. Vivamus id lectus dolor. Ut ut consequat ligula, id mattis ipsum. Donec et dolor suscipit, bibendum purus sed, vehicula lorem. Praesent eu lacus accumsan, mollis magna sit amet, rutrum libero. Duis mollis at lectus id cursus. Fusce venenatis tincidunt justo eu fermentum. Nam eu tincidunt odio, a mattis orci. Fusce condimentum ipsum mi, non fringilla quam interdum quis. Aliquam ultrices orci a lacus molestie euismod. Fusce tincidunt non massa in suscipit. Ut a tristique lacus. Proin quis mi eget nibh congue dapibus. Proin porttitor augue quis dignissim egestas.
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lacus metus. Nulla quis felis in ipsum varius dictum. Donec ullamcorper quis nulla in porta. Maecenas fringilla tristique velit, sed mattis eros placerat at. Mauris vestibulum lectus volutpat pharetra scelerisque. Phasellus vulputate id diam sit amet pulvinar. Suspendisse euismod ornare diam ut laoreet. Aenean aliquet mauris sed justo rutrum pulvinar. Nunc tristique malesuada posuere. Proin tempus tempor sem, et lacinia justo vulputate id. Donec posuere in massa sed ornare. Proin sed vestibulum justo. Aenean et porta felis. Praesent sodales cursus felis, id commodo sapien facilisis in.
+
+			Aenean tristique sem consequat tempor posuere. Etiam vitae viverra mi. Pellentesque luctus, felis vitae ultricies accumsan, urna quam tempus velit, vitae varius neque mi nec urna. Aenean hendrerit ac eros vitae scelerisque. Quisque vitae viverra dui. Fusce tincidunt sed sapien in auctor. Quisque lobortis et ante consequat accumsan. Vestibulum non magna auctor, fringilla nibh id, vehicula eros. Pellentesque viverra massa non elit dictum, vel laoreet nunc scelerisque. Proin nec nisi vitae velit fermentum aliquam.
+		</p>
+		
+		<blockquote>
+			test blockquote
+		</blockquote>
+		
+		<code>
+			test code
+		</code>
+		
+		<pre>
+			test pre
+		</pre>
+		
+		<a href="#">blabla</a> / <a href="#">blabla</a> / <a href="#">blabla</a>
+		
+		<br><br>
+
+
+
+
+		<!-- card -->
+		<div class="card"><div class="section"><h3>Card with image</h3></div><img class="section media" src="https://placehold.it/800x600" alt="image"><div class="section"><p>Content</p></div></div>
+
+		<!-- card dark & darker -->
+		<div class="card"><div class="section"><h3>Normal section</h3></div><div class="section dark"><h3>Dark section</h3></div><div class="section darker"><h3>Darker section</h3></div></div>
+
+		<!-- small & large & fluid -->
+		<div class="card small">
+			<div class="section">
+				<p>Content</p>
+			</div>
+		</div>
+
+		<div class="card large">
+			<div class="section">
+				<p>Content</p>
+			</div>
+		</div>
+
+		<div class="card fluid">
+			<div class="section">
+				<p>Content</p>
+			</div>
+		</div>
+		<br><br>
+
+		<!-- hero (spectre) -->
+		<div class="hero bg-primary">
+			<div class="hero-body">
+				<h1>Hero title</h1>
+				<p>This is a hero example</p>
+			</div>
+		</div>
+
+		<div class="hero hero-sm bg-error">
+			<div class="hero-body">
+				<h1>Hero title</h1>
+				<p>This is a hero example</p>
+			</div>
+		</div>
+
+		<div class="hero hero-lg bg-tertiary">
+			<div class="hero-body">
+				<h1>Hero title</h1>
+				<p>This is a hero example</p>
+			</div>
+		</div>
+		<br><br>
+
+		
+
+		<!-- pagination -->
+		<ul class="pagination">
+		    <li class="page-item disabled">
+		    	<a href="#" tabindex="-1">Previous</a>
+		    </li>
+
+		    <li class="page-item active">
+		    	<a href="#">1</a>
+		    </li>
+
+		    <li class="page-item">
+		    	<a href="#">2</a>
+		    </li>
+
+		    <li class="page-item">
+		    	<a href="#">3</a>
+		    </li>
+
+		    <li class="page-item">
+		    	<span>...</span>
+		    </li>
+
+		    <li class="page-item">
+		    	<a href="#">12</a>
+		    </li>
+
+		    <li class="page-item">
+		    	<a href="#">Next</a>
+		    </li>
+		</ul>
+
+
+		<br><br>
+
+		<!-- filter -->
+		<div class="filter">
+			<input type="radio" id="tag-0" class="filter-tag" name="filter-radio" hidden checked>
+			<input type="radio" id="tag-1" class="filter-tag" name="filter-radio" hidden>
+			<input type="radio" id="tag-2" class="filter-tag" name="filter-radio" hidden>
+			<input type="radio" id="tag-3" class="filter-tag" name="filter-radio" hidden>
+			<input type="radio" id="tag-4" class="filter-tag" name="filter-radio" hidden>
+			<input type="radio" id="tag-5" class="filter-tag" name="filter-radio" hidden>
+			<input type="radio" id="tag-6" class="filter-tag" name="filter-radio" hidden>
+
+			<div class="filter-nav center">
+				<label class="chip" for="tag-0">All</label>
+				<label class="chip" for="tag-1">Action</label>
+				<label class="chip" for="tag-2">Roleplaying</label>
+				<label class="chip" for="tag-3">Roleplaying</label>
+				<label class="chip" for="tag-4">Roleplaying</label>
+				<label class="chip" for="tag-5">Roleplaying</label>
+				<label class="chip" for="tag-6">Roleplaying</label>
+			</div>
+
+			<div class="filter-body">
+				<div class="filter-item card" data-tag="tag-1">
+					<div class="section">
+						<h3>Title tag 1</h3>
+						<p>Card content...</p>
+					</div>
+				</div>
+
+				<div class="filter-item card error" data-tag="tag-2">
+					<div class="section">
+					  <h3>Title tag 2</h3>
+					  <p>Card content...</p>
+					</div>
+				</div>
+
+				<div class="filter-item card warning" data-tag="tag-3">
+					<div class="section">
+					  <h3>Title tag 3</h3>
+					  <p>Card content...</p>
+					</div>
+				</div>
+
+				<div class="filter-item card primary" data-tag="tag-4">
+					<div class="section">
+					  <h3>Title tag 4</h3>
+					  <p>Card content...</p>
+					</div>
+				</div>
+
+				<div class="filter-item card secondary" data-tag="tag-5">
+					<div class="section">
+					  <h3>Title tag 5</h3>
+					  <p>Card content...</p>
+					</div>
+				</div>
+
+				<div class="filter-item card tertiary" data-tag="tag-6">
+					<div class="section">
+					  <h3>Title tag 6</h3>
+					  <p>Card content...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fin exemple -->
+
+		<footer class="row">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<p style="text-align: justify;"><strong>mini.css</strong> was designed and built by <a href="https://github.com/Chalarangelo" target="_blank">@Chalarangelo</a>. Source code licensed under the <a href="https://github.com/Chalarangelo/mini.css/blob/master/LICENSE">MIT License</a>.</p>
+				<p>Icons provided by <a href="https://feathericons.com/" target="_blank">Feather</a>. Photo by <a href="https://unsplash.com/photos/vjMgqUkS8q8" target="_blank">Christopher Gower</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+			</div>
+		</footer>
+	</body>
+</html>
