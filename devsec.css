@@ -6,6 +6,18 @@
 	devsec.css version: v0.0.1
 */
 
+/* ********************************************************** */
+/* Font */
+/* ********************************************************** */
+@font-face {
+	font-family: Hacked;
+	src: url(https://hackedfont.com/HACKED.ttf);
+}
+
+.pHacked{ 
+	font-family: Hacked !important; 
+}
+
 :root {
 	/* color */
 	--black: #111111; /* noir */
@@ -1505,6 +1517,17 @@ mark.inline-block {
 	margin-top: calc(2 * var(--universal-margin));
 }
 
+#modal-check {
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+}
+
 [type="checkbox"].modal {
 	height: 1px;
 	width: 1px;
@@ -1569,6 +1592,47 @@ mark.inline-block {
 [type="checkbox"].modal:checked + div .card .modal-close {
 	z-index: 1211;
 }
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45)
+}
+
+.modal .card {
+    margin: 0 auto;
+    max-height: 50vh;
+    overflow: auto
+}
+
+.modal .card .close {
+    position: absolute;
+    top: .75rem;
+    right: .25rem;
+    padding: 0
+}
+
+:checked+.modal {
+    display: -webkit-box;
+    -webkit-box-flex: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    z-index: 1200
+}
+
+:checked+.modal .card .close {
+    z-index: 1211
+}
+
+
 
 .collapse {
 	width: calc(100% - 2 * var(--universal-margin));
@@ -1897,6 +1961,25 @@ span.icon-user {
 
 .hidden {
 	display: none !important;
+}
+
+#easterForm>input {
+	display: block;
+	width: 100%;
+	font-size: 1.75rem;
+	background: none;
+	border: none;
+	outline: none;
+	color: rgba(255,255,255,0.9);
+}
+
+/* blink */
+.blink{ animation: Blink 1s infinite; }
+
+@keyframes Blink{
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
 }
 
 /* tabs */
