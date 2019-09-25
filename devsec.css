@@ -125,8 +125,8 @@
 
 	/* Definitions for progress elements and spinners.*/
 	/* Progess module CSS variable definitions */
-	--progress-back-color: var(--grey);
-	--progress-fore-color: var(--grey);
+	--progress-back-color: var(--white);
+	--progress-fore-color: var(--blue);
 
 	--spinner-back-color: var(--white);
 	--spinner-fore-color: var(--grey);
@@ -1285,97 +1285,31 @@ footer.sticky {
 	bottom: 0;
 }
 
-.drawer-toggle:before {
-	display: inline-block;
-	position: relative;
-	vertical-align: bottom;
-	content: '\00a0\2261\00a0';
-	font-family: sans-serif;
-	font-size: 1.5em;
+/* btn close */
+.close {
+    display: inline-block;
+    width: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 700;
+    border-radius: 2rem;
+    background: var(--grey);
+    vertical-align: top;
+    cursor: pointer;
+    transition: background 0.3s
 }
 
-@media screen and (min-width: 768px) {
-	.drawer-toggle:not(.persistent) {
-		display: none;
-	}
+.close:hover,
+.close:focus {
+    background: var(--grey);
+    border: 1px solid var(--blue);
 }
 
-[type="checkbox"].drawer {
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	overflow: hidden;
-	position: absolute;
-	clip: rect(0 0 0 0);
-	-webkit-clip-path: inset(100%);
-	clip-path: inset(100%);
-}
-
-[type="checkbox"].drawer + * {
-	display: block;
-	box-sizing: border-box;
-	position: fixed;
-	top: 0;
-	width: 320px;
-	height: 100vh;
-	overflow-y: auto;
-	background: var(--drawer-back-color);
-	border: 0.0625rem solid var(--drawer-border-color);
-	border-radius: 0;
-	margin: 0;
-	z-index: 1110;
-	right: -320px;
-	transition: right 0.3s;
-}
-
-[type="checkbox"].drawer + * .drawer-close {
-	position: absolute;
-	top: var(--universal-margin);
-	right: var(--universal-margin);
-	z-index: 1111;
-	width: 2rem;
-	height: 2rem;
-	border-radius: var(--universal-border-radius);
-	padding: var(--universal-padding);
-	margin: 0;
-	cursor: pointer;
-	transition: background 0.3s;
-}
-
-[type="checkbox"].drawer + * .drawer-close:before {
-	display: block;
-	content: '\00D7';
-	color: var(--drawer-close-color);
-	position: relative;
-	font-family: sans-serif;
-	font-size: 2rem;
-	line-height: 1;
-	text-align: center;
-}
-
-[type="checkbox"].drawer + * .drawer-close:hover, [type="checkbox"].drawer + * .drawer-close:focus {
-	background: var(--drawer-hover-back-color);
-}
-
-@media screen and (max-width: 320px) {
-	[type="checkbox"].drawer + * {
-		width: 100%;
-	}
-}
-
-[type="checkbox"].drawer:checked + * {
-	right: 0;
-}
-
-@media screen and (min-width: 768px) {
-	[type="checkbox"].drawer:not(.persistent) + * {
-		position: static;
-		height: 100%;
-		z-index: 1100;
-	}
-	[type="checkbox"].drawer:not(.persistent) + * .drawer-close {
-		display: none;
-	}
+.close:before {
+    content: "\00D7";
+    display: block;
+    text-align: center
 }
 
 /* Definitions for the responsive table component. */
@@ -1793,50 +1727,143 @@ progress.inline {
 	width: 60%;
 }
 
-@keyframes spinner-donut-anim {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-.spinner {
-	display: inline-block;
-	margin: var(--universal-margin);
-	border: 0.25rem solid var(--spinner-back-color);
-	border-left: 0.25rem solid var(--spinner-fore-color);
-	border-radius: 50%;
-	width: 1.25rem;
-	height: 1.25rem;
-	animation: spinner-donut-anim 1.2s linear infinite;
-}
-
 /* Custom elements for progress bars and spinners. */
 progress.primary {
-	--progress-fore-color: #1976d2;
+	--progress-fore-color: var(--blue);
 }
 
 progress.secondary {
-	--progress-fore-color: #d32f2f;
+	--progress-fore-color: var(--pink);
 }
 
 progress.tertiary {
-	--progress-fore-color: #308732;
+	--progress-fore-color: var(--green);
 }
 
-.spinner.primary {
-	--spinner-fore-color: #1976d2;
+@-webkit-keyframes spinner-donut-anim {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
 }
 
-.spinner.secondary {
-	--spinner-fore-color: #d32f2f;
+@keyframes spinner-donut-anim {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
-.spinner.tertiary {
-	--spinner-fore-color: #308732;
+.spinner-donut {
+    display: inline-block;
+    border: .25rem solid #e3f2fd;
+    border-left: .25rem solid #1565c0;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    -webkit-animation: spinner-donut-anim 1.2s linear infinite;
+    animation: spinner-donut-anim 1.2s linear infinite
 }
+
+.spinner-donut.primary {
+    border: .25rem solid #ffebee;
+    border-left: .25rem solid var(--blue);
+}
+
+.spinner-donut.secondary {
+    border: .25rem solid #ffebee;
+    border-left: .25rem solid var(--pink);
+}
+
+.spinner-donut.tertiary {
+    border: .25rem solid #e8f5e9;
+    border-left: .25rem solid var(--green);
+}
+
+.spinner-donut.large {
+    border-width: .375rem;
+    width: 2rem;
+    height: 2rem
+}
+
+/* drawer */
+.drawer-toggle:before {
+    position: relative;
+    top: .4375rem;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    line-height: .125;
+    content: '\2261'
+}
+
+.drawer {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--back-color);
+    border: .0625rem solid #c9c9c9;
+    margin: 0;
+    z-index: 1110
+}
+
+.drawer:not(.right) {
+    left: -320px;
+    transition: left 0.3s
+}
+
+.drawer.right {
+    right: -320px;
+    transition: right 0.3s
+}
+
+.drawer .close {
+    position: absolute;
+    top: .75rem;
+    right: .25rem;
+    z-index: 1111;
+    padding: 0
+}
+
+@media screen and (max-width: 320px) {
+    .drawer {
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .drawer:not(.persistent) {
+        position: static;
+        height: 100%;
+        z-index: 1100
+    }
+    .drawer:not(.persistent) .close {
+        display: none
+    }
+    .drawer-toggle:not(.persistent) {
+        display: none
+    }
+}
+
+:checked+.drawer:not(.right) {
+    left: 0
+}
+
+:checked+.drawer.right {
+    right: 0
+}
+
+#demo-toggle {
+	display: none;
+}
+
 
 /* Definitions for icons - powered by Feather (https://feathericons.com/). */
 span[class^='icon-'] {
@@ -1963,6 +1990,68 @@ span.icon-user {
 	display: none !important;
 }
 
+/* breadcrumb */
+ul.breadcrumbs {
+	color: var(--pink);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    list-style: none;
+    margin: var(--universal-margin);
+    width: calc(100% - 2 * var(--universal-margin));
+    padding: 0
+}
+
+ul.breadcrumbs li {
+    -webkit-box-flex: 1;
+    max-width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    position: relative;
+    text-align: center;
+    background: var(--grey);
+    height: 2rem;
+    line-height: 2rem;
+    margin-right: 1.125rem
+}
+
+ul.breadcrumbs li:before,
+ul.breadcrumbs li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 0 solid var(--grey);
+    border-width: 1rem 1rem
+}
+
+ul.breadcrumbs li:before {
+    left: -1rem;
+    border-left-color: transparent
+}
+
+ul.breadcrumbs li:after {
+    left: 100%;
+    border-color: transparent;
+    border-left-color: var(--grey);
+}
+
+ul.breadcrumbs li:first-child:before {
+    border: 0
+}
+
+ul.breadcrumbs li:last-child {
+    margin-right: 0
+}
+
+ul.breadcrumbs li:last-child:after {
+    border: 0
+}
+
+/* easterEgg */
 #easterForm>input {
 	display: block;
 	width: 100%;
