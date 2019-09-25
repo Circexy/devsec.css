@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-	Flavor name: DevSec
+	Style name: DevSec
 	Author: James Dumontier
 	Maintainers: James Dumontier
 	devsec.css version: v0.0.1
@@ -330,9 +330,7 @@ a:hover, a:focus {
 	text-decoration: underline;
 }
 
-/*
-	Definitions for the grid system, cards and containers.
-*/
+/* Definitions for the grid system, cards and containers. */
 .container {
 	margin: 0 auto;
 	padding: 0 calc(1.5 * var(--universal-padding));
@@ -782,9 +780,7 @@ a:hover, a:focus {
 	border-bottom: 0;
 }
 
-/*
-	 Custom elements for card elements.
-*/
+/* Custom elements for card elements. */
 @media screen and (min-width: 240px) {
 	.card.small {
 		max-width: 240px;
@@ -823,9 +819,7 @@ a:hover, a:focus {
 	padding: calc(1.5 * var(--universal-padding));
 }
 
-/*
-	Definitions for forms and input elements.
-*/
+/* Definitions for forms and input elements. */
 /* Input_control module CSS variable definitions */
 
 form {
@@ -1065,9 +1059,7 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:d
 	}
 }
 
-/*
-	 Custom elements for forms and input elements.
-*/
+/* Custom elements for forms and input elements. */
 button.primary, [type="button"].primary, [type="submit"].primary, [type="reset"].primary, .button.primary, [role="button"].primary {
 	--button-back-color: var(--blue);
 	--button-fore-color: #f8f8f8;
@@ -1162,9 +1154,7 @@ a.button.splash-tertiary:hover {
 	border-color: var(--green);
 }
 
-/*
-	Definitions for navigation elements.
-*/
+/* Definitions for navigation elements. */
 /* Navigation module CSS variable definitions */
 
 header {
@@ -1381,9 +1371,7 @@ footer.sticky {
 	}
 }
 
-/*
-	Definitions for the responsive table component.
-*/
+/* Definitions for the responsive table component. */
 /* Table module CSS variable definitions. */
 .table {
   border-collapse: collapse;
@@ -1426,9 +1414,7 @@ thead tr th {
 	border-bottom: 1px solid var(--pink) !important;
 }
 
-/*
-	Definitions for contextual background elements, toasts and tooltips.
-*/
+/* Definitions for contextual background elements, toasts and tooltips. */
 /* Contextual module CSS variable definitions */
 
 mark {
@@ -1684,9 +1670,7 @@ mark.inline-block {
 	border-radius: 0 0 var(--universal-border-radius) var(--universal-border-radius);
 }
 
-/*
-	 Custom elements for contextual background elements, toasts and tooltips.
-*/
+/* Custom elements for contextual background elements, toasts and tooltips. */
 mark.secondary {
 	--mark-back-color: var(--pink);
 }
@@ -1701,9 +1685,7 @@ mark.tag {
 	border-radius: 1em;
 }
 
-/*
-	Definitions for progress elements and spinners.
-*/
+/* Definitions for progress elements and spinners. */
 /* Progess module CSS variable definitions */
 
 progress {
@@ -1771,9 +1753,7 @@ progress.inline {
 	animation: spinner-donut-anim 1.2s linear infinite;
 }
 
-/*
-	 Custom elements for progress bars and spinners.
-*/
+/* Custom elements for progress bars and spinners. */
 progress.primary {
 	--progress-fore-color: #1976d2;
 }
@@ -1798,9 +1778,7 @@ progress.tertiary {
 	--spinner-fore-color: #308732;
 }
 
-/*
-	Definitions for icons - powered by Feather (https://feathericons.com/).
-*/
+/* Definitions for icons - powered by Feather (https://feathericons.com/). */
 span[class^='icon-'] {
 	display: inline-block;
 	height: 1em;
@@ -1900,9 +1878,7 @@ span.icon-user {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fdfdfd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E");
 }
 
-/*
-	Definitions for utilities and helper classes.
-*/
+/* Definitions for utilities and helper classes. */
 /* Utility module CSS variable definitions */
 
 /* ########## */
