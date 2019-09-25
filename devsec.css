@@ -1128,23 +1128,25 @@ a.button.splash-primary:hover {
 	background: var(--blue);
 	color: #f8f8f8;
 	border-color: var(--blue);
+	filter: none;
 }
 
 a.button.splash-secondary:hover {
 	background: var(--pink);
 	color: #f8f8f8;
 	border-color: var(--pink);
+	filter: none;
 }
 
 a.button.splash-tertiary:hover {
 	background: var(--green);
 	color: #f8f8f8;
 	border-color: var(--green);
+	filter: none;
 }
 
 /* Definitions for navigation elements. */
 /* Navigation module CSS variable definitions */
-
 header {
 	height: 3.1875rem;
 	background: var(--header-back-color);
