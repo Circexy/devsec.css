@@ -821,6 +821,11 @@ a:hover, a:focus {
 
 /* Definitions for forms and input elements. */
 /* Input_control module CSS variable definitions */
+form {
+	margin: var(--universal-margin);
+    width: calc(100% - 2 * var(--universal-margin));
+}
+
 fieldset {
 	border: 0.0625rem solid var(--form-border-color);
 	border-radius: var(--universal-border-radius);
@@ -1367,7 +1372,8 @@ footer.sticky {
 	border-collapse: collapse;
 	border-spacing: 0;
 	text-align: left; 
-	width: 100%;
+	margin: var(--universal-margin);
+    width: calc(100% - 2 * var(--universal-margin));
 }
 
 .table.table-striped tbody tr:nth-of-type(odd) {
@@ -1891,6 +1897,153 @@ span.icon-user {
 
 .hidden {
 	display: none !important;
+}
+
+/* tabs */
+.tabs {
+	/*width: 100%;*/
+	margin: var(--universal-margin);
+    width: calc(100% - 2 * var(--universal-margin));
+	opacity: 1;
+	display: -webkit-box;
+	-webkit-box-pack: justify;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.tabs>label {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	-webkit-order: 1;
+	order: 1;
+	display: inline-block;
+	height: 1.5rem;
+	cursor: pointer;
+	transition: background 0.3s;
+	background: var(--grey);
+	border: .0625rem solid var(--grey);
+	padding: .75rem
+}
+
+.tabs>label:hover,
+.tabs>label:focus {
+	background: var(--blue);
+}
+
+.tabs>[type="radio"],
+.tabs>[type="checkbox"] {
+	display: none;
+	visibility: hidden
+}
+
+.tabs>label+div {
+	-webkit-flex-basis: auto;
+	flex-basis: auto;
+	-webkit-order: 2;
+	order: 2;
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	transition: -webkit-transform 0.3s, transform 0.3s
+}
+
+.tabs>label:not(:first-of-type) {
+	border-left: 0
+}
+
+.tabs>:checked+label {
+	/*background: #eee;*/
+	border-bottom-color: var(--blue);
+}
+
+.tabs>:checked+label:hover,
+.tabs>:checked+label:focus {
+	background: var(--blue);
+}
+
+.tabs>:checked+label+div {
+	box-sizing: border-box;
+	position: relative;
+	height: 400px;
+	width: 100%;
+	overflow: auto;
+	margin: 0;
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	border: .0625rem solid var(--grey);
+	border-top: 0;
+	padding: .5rem;
+	clip: auto;
+	-webkit-clip-path: inset(0%);
+	clip-path: inset(0%)
+}
+
+.tabs.stacked {
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column
+}
+
+.tabs.stacked>label {
+	-webkit-order: initial;
+	order: initial
+}
+
+.tabs.stacked>:checked+label {
+	border: .0625rem solid var(--grey);
+}
+
+.tabs.stacked>label+div {
+	-webkit-order: initial;
+	order: initial;
+	-webkit-transform-origin: top;
+	transform-origin: top
+}
+
+.tabs.stacked>label:not(:first-of-type) {
+	border: .0625rem solid var(--grey);
+	border-top: 0
+}
+
+.tabs.stacked>:checked+label+div {
+	height: auto
+}
+
+@media screen and (max-width: 767px) {
+	.tabs {
+		-webkit-box-orient: vertical;
+		-webkit-flex-direction: column;
+		flex-direction: column
+	}
+	.tabs>label {
+		-webkit-order: initial;
+		order: initial
+	}
+	.tabs>:checked+label {
+		border: .0625rem solid var(--grey);
+	}
+	.tabs>label+div {
+		-webkit-order: initial;
+		order: initial
+	}
+	.tabs>label:not(:first-of-type) {
+		border: .0625rem solid var(--grey);
+		border-top: 0
+	}
 }
 
 .visually-hidden {
