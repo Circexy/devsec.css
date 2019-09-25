@@ -821,15 +821,6 @@ a:hover, a:focus {
 
 /* Definitions for forms and input elements. */
 /* Input_control module CSS variable definitions */
-
-form {
-	background: var(--form-back-color);
-	color: var(--form-fore-color);
-	border-radius: var(--universal-border-radius);
-	margin: var(--universal-margin);
-	padding: calc(2 * var(--universal-padding)) var(--universal-padding);
-}
-
 fieldset {
 	border: 0.0625rem solid var(--form-border-color);
 	border-radius: var(--universal-border-radius);
@@ -1018,7 +1009,7 @@ a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:f
 a[role="button"]:hover,
 a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
 	/*background: var(--button-hover-back-color);*/
-	filter: brightness(85%);
+	filter: brightness(75%);
 	border-color: var(--button-hover-border-color);
 }
 
@@ -1066,7 +1057,7 @@ button.primary, [type="button"].primary, [type="submit"].primary, [type="reset"]
 }
 
 button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus, [type="reset"].primary:hover, [type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
-	filter: brightness(85%);
+	filter: brightness(75%);
 	--button-hover-back-color: #1565c0;
 }
 
@@ -1076,18 +1067,15 @@ button.secondary, [type="button"].secondary, [type="submit"].secondary, [type="r
 }
 
 button.secondary:hover, button.secondary:focus, [type="button"].secondary:hover, [type="button"].secondary:focus, [type="submit"].secondary:hover, [type="submit"].secondary:focus, [type="reset"].secondary:hover, [type="reset"].secondary:focus, .button.secondary:hover, .button.secondary:focus, [role="button"].secondary:hover, [role="button"].secondary:focus {
-	filter: brightness(85%);
-	--button-hover-back-color: #c62828;
+	filter: brightness(75%);
 }
 
 button.tertiary, [type="button"].tertiary, [type="submit"].tertiary, [type="reset"].tertiary, .button.tertiary, [role="button"].tertiary {
 	--button-back-color: var(--green);
-	--button-fore-color: #f8f8f8;
 }
 
 button.tertiary:hover, button.tertiary:focus, [type="button"].tertiary:hover, [type="button"].tertiary:focus, [type="submit"].tertiary:hover, [type="submit"].tertiary:focus, [type="reset"].tertiary:hover, [type="reset"].tertiary:focus, .button.tertiary:hover, .button.tertiary:focus, [role="button"].tertiary:hover, [role="button"].tertiary:focus {
-	filter: brightness(85%);
-	--button-hover-back-color: #277529;
+	filter: brightness(75%);
 }
 
 button.inverse, [type="button"].inverse, [type="submit"].inverse, [type="reset"].inverse, .button.inverse, [role="button"].inverse {
@@ -1374,40 +1362,40 @@ footer.sticky {
 /* Definitions for the responsive table component. */
 /* Table module CSS variable definitions. */
 .table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-align: left; 
-  width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left; 
+	width: 100%;
 }
 
 .table.table-striped tbody tr:nth-of-type(odd) {
-  background: var(--grey);
+	background: var(--grey);
 }
 
 .table tbody tr.active,
 .table.table-striped tbody tr.active {
-  background: var(--grey);
+	background: var(--grey);
 }
 
 .table.table-hover tbody tr:hover {
-  background: var(--blue);
+	background: var(--blue);
 }
 
 .table.table-scroll {
-  display: block;
-  overflow-x: auto;
-  padding-bottom: .75rem;
-  white-space: nowrap;
+	display: block;
+	overflow-x: auto;
+	padding-bottom: .75rem;
+	white-space: nowrap;
 }
 
 .table td,
 .table th {
-  border-bottom: .05rem solid var(--grey);
-  padding: .6rem .4rem;
+	border-bottom: .05rem solid var(--grey);
+	padding: .6rem .4rem;
 }
 
 .table th {
-  border-bottom-width: .1rem;
+	border-bottom-width: .1rem;
 }
 
 thead tr th {
@@ -1884,23 +1872,23 @@ span.icon-user {
 /* ########## */
 /* utilitaire */
 .center{
-  text-align: center;
+	text-align: center;
 }
 
 .full{
-  width: 100%;
+	width: 100%;
 }
 
 .left{
-  text-align: left;
+	text-align: left;
 }
 
 .right{
-  text-align: right;
+	text-align: right;
 }
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 .visually-hidden {
@@ -1948,8 +1936,8 @@ span.icon-user {
 	}
 
 	.container {
-	    width: 70%;
-	    margin: 0 auto;
+		width: 70%;
+		margin: 0 auto;
 	}
 }
 
@@ -2070,8 +2058,8 @@ span.icon-user {
 .filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for="tag-7"],
 .filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-8"],
 .filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-9"] {
-  background: var(--pink);
-  color: #fff;
+	background: var(--pink);
+	color: #fff;
 }
 
 .filter .filter-tag#tag-a:checked ~ .filter-body .filter-item:not([data-tag~="tag-a"]),
@@ -2109,16 +2097,16 @@ span.icon-user {
 .filter .filter-tag#tag-7:checked ~ .filter-body .filter-item:not([data-tag~="tag-7"]),
 .filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~="tag-8"]),
 .filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~="tag-9"]) {
-  display: none;
+	display: none;
 }
 
 .filter .filter-nav {
-  margin: .4rem 0;
+	margin: .4rem 0;
 }
 
 .filter .filter-body {
-  display: flex;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+	display: flex;
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
