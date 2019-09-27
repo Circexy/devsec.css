@@ -1137,7 +1137,7 @@ button.large, [type="button"].large, [type="submit"].large, [type="reset"].large
 	margin: var(--universal-margin);
 }
 
-a.splash-button {
+a.banner-button {
 	position: absolute;
 	top: 65vh;
 	width: 50vw;
@@ -1146,42 +1146,68 @@ a.splash-button {
 	font-size: 1.25rem;
 }
 
-a.button.splash-primary {
+a.button.banner-primary {
 	border-color: var(--blue);
 	background: none;
 	transition: all 0.3s
 }
 
-a.button.splash-secondary {
+a.button.banner-secondary {
 	border-color: var(--pink);
 	background: none;
 	transition: all 0.3s
 }
 
-a.button.splash-tertiary {
+a.button.banner-tertiary {
 	border-color: var(--green);
 	background: none;
 	transition: all 0.3s
 }
 
-a.button.splash-primary:hover {
+a.button.banner-warning {
+	border-color: var(--warning);
+	background: none;
+	transition: all 0.3s
+}
+
+a.button.banner-error {
+	border-color: var(--error);
+	background: none;
+	transition: all 0.3s
+}
+
+a.button.banner-primary:hover {
 	background: var(--blue);
 	color: #f8f8f8;
 	border-color: var(--blue);
 	filter: none;
 }
 
-a.button.splash-secondary:hover {
+a.button.banner-secondary:hover {
 	background: var(--pink);
 	color: #f8f8f8;
 	border-color: var(--pink);
 	filter: none;
 }
 
-a.button.splash-tertiary:hover {
+a.button.banner-tertiary:hover {
 	background: var(--green);
 	color: #f8f8f8;
 	border-color: var(--green);
+	filter: none;
+}
+
+a.button.banner-error:hover {
+	background: var(--error);
+	color: #f8f8f8;
+	border-color: var(--error);
+	filter: none;
+}
+
+a.button.banner-warning:hover {
+	background: var(--warning);
+	color: #f8f8f8;
+	border-color: var(--warning);
 	filter: none;
 }
 
@@ -2073,12 +2099,20 @@ span.icon-user {
 }
 
 /* border */
+.b-primary {
+	border: 1px solid var(--blue);
+}
+
 .bt-primary {
 	border-top: 1px solid var(--blue);
 }
 
 .bb-primary {
 	border-bottom: 1px solid var(--blue);
+}
+
+.b-secondary {
+	border: 1px solid var(--pink);
 }
 
 .bt-secondary {
@@ -2089,6 +2123,10 @@ span.icon-user {
 	border-bottom: 1px solid var(--pink);
 }
 
+.b-tertiary {
+	border: 1px solid var(--green);
+}
+
 .bt-tertiary {
 	border-top: 1px solid var(--green);
 }
@@ -2097,12 +2135,20 @@ span.icon-user {
 	border-bottom: 1px solid var(--green);
 }
 
+.b-error {
+	border: 1px solid var(--error);
+}
+
 .bt-error {
 	border-top: 1px solid var(--error);
 }
 
 .bb-error {
 	border-bottom: 1px solid var(--error);
+}
+
+.b-warning {
+	border: 1px solid var(--warning);
 }
 
 .bt-warning {
@@ -2314,8 +2360,12 @@ ul.breadcrumbs li:last-child:after {
 	border-top: 0
 }
 
+.tabs.stacked>label:first-of-type {
+	border-top: .0625rem solid var(--grey);
+}
+
 .tabs.stacked>:checked+label+div {
-	height: auto
+	height: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -2561,7 +2611,7 @@ ul.breadcrumbs li:last-child:after {
 	flex-wrap: wrap;
 }
 
-/* hero (spectre) */
+/* banner */
 .banner {
 	display: flex;
 	display: -ms-flexbox;
@@ -2594,6 +2644,70 @@ ul.breadcrumbs li:last-child:after {
 	padding: .4rem;
 }
 
+/* banner main */
+.index-banner-image {
+	background-image: url("../pics/index-splash.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute
+}
+
+.index-banner-image:not(.no-filter) {
+	filter: blur(2px)
+}
+
+h1.banner-splash {
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	line-height: 60vh;
+	font-size: 3rem;
+	font-weight: 400;
+	color: #f22f21
+}
+
+h1.banner-splash small {
+	display: initial;
+	font-size: 0.5em;
+	color: #222
+}
+
+h1.banner-splash::first-letter {
+	font-size: 1.33em;
+	color: #fff;
+	background: #f22f21;
+	border-radius: 6px;
+	padding: 0 10px
+}
+
+p.banner-splash {
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	padding-top: 40vh
+}
+
+@media screen and (min-width: 768px) {
+	a.button.banner-splash {
+		width: 30vw;
+		left: 35vw
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	a.button.banner-splash {
+		width: 25vw;
+		left: 37.5vw
+	}
+}
+
+/* banner news ticker */
 .banner-news {
 	position: absolute;
     bottom: 0;
