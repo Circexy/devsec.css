@@ -1993,6 +1993,38 @@ span.icon-user {
 
 /* ########## */
 /* utilitaire */
+.c-primary {
+	color: var(--blue);
+}
+
+.c-secondary {
+	color: var(--pink);
+}
+
+.c-tertiary {
+	color: var(--green);
+}
+
+.c-warning {
+	color: var(--warning);
+}
+
+.c-error {
+	color: var(--error);
+}
+
+.c-white {
+	color: var(--white);
+}
+
+.c-grey {
+	color: var(--grey);
+}
+
+.c-black {
+	color: var(--black);
+}
+
 .center{
 	text-align: center;
 }
@@ -2530,7 +2562,7 @@ ul.breadcrumbs li:last-child:after {
 }
 
 /* hero (spectre) */
-.hero {
+.banner {
 	display: flex;
 	display: -ms-flexbox;
 	-ms-flex-direction: column;
@@ -2541,25 +2573,30 @@ ul.breadcrumbs li:last-child:after {
 	padding-top: 4rem;
 }
 
-.hero.hero-sm {
+.banner.banner-sm {
 	padding-bottom: 2rem;
 	padding-top: 2rem;
 }
 
-.hero.hero-lg {
+.banner.banner-lg {
 	padding-bottom: 8rem;
 	padding-top: 8rem;
 }
 
-.hero.hero-full {
+.banner.banner-full {
 	width: 100%;
 	height: 100vh;
-	padding-bottom: 8rem;
-	padding-top: 8rem;
+	padding-bottom: 0;
+	padding-top: 0;
 }
 
-.hero .hero-body {
+.banner .banner-body {
 	padding: .4rem;
+}
+
+.banner-news {
+	position: absolute;
+    bottom: 0;
 }
 
 /* pagination */
