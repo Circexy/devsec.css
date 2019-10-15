@@ -2117,6 +2117,14 @@ span.icon-user {
 	background-color: var(--error);
 }
 
+.bg-white{
+	background-color: var(--white);
+}
+
+.bg-black{
+	background-color: var(--black);
+}
+
 /* border */
 .b-primary {
 	border: 1px solid var(--blue);
