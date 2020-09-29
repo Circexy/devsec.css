@@ -2673,7 +2673,7 @@ ul.breadcrumbs li:last-child:after {
 
 /* banner main */
 .index-banner-image {
-	background-image: url("../pics/index-splash.jpg");
+	background-image: url("https://picsum.photos/200/300");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
