@@ -1,0 +1,45 @@
+<!-- add multiple css file -->
+<link href="sakura-vader.css" id="sakura-css" rel="stylesheet" type="text/css">
+
+<button id="switchThemeButton" onclick="switchSakuraTheme();">Switch</button>
+
+<script>
+  var themes = [
+    {
+      name: "Sakura (default)",
+      href: "sakura.css",
+    },
+    {
+      name: "sakura-earthly",
+      href: "sakura-earthly.css",
+    },
+    {
+      name: "sakura-vader",
+      href: "sakura-vader.css",
+    },
+    {
+      name: "sakura-dark",
+      href: "sakura-dark.css"
+    },
+  ];
+  var current = 0;
+  var sakura = document.getElementById("sakura-css");
+  sakura.disabled = false;
+  function toggleSakura() {
+    if (sakura.disabled === true) {
+      sakura.disabled = false
+      switchTag.style.display = 'block';
+    } else {
+      sakura.disabled = true
+      switchTag.style.display = 'none';
+    }
+  }
+
+  var switchTag = document.getElementById("switch");
+  var currentThemeTag = document.getElementById("currentTheme");
+  function switchSakuraTheme() {
+    sakura.href = themes[(current + 1)% themes.length].href;
+    currentThemeTag.innerHTML = themes[(current + 1)% themes.length].name;
+    current += 1
+  }
+</script>
