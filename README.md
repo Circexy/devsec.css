@@ -35,3 +35,6 @@ img, canvas, iframe, video, svg { max-width: 100%; }
 |	+ tmplfull.scss (tmpl.css + root/navigation/contextualbg/toast/tooltip/modal/collapse/progress/spinner/utilities/breadcrumb/easterEgg?/blink/tabs/filter/banner/pagination/newsTicker)
 
 
+#full reset
+https://developer.mozilla.org/fr/docs/Web/CSS/all
+* {all: unset;}
