@@ -1,4 +1,5 @@
 .row{display: flex; flex-flow: row wrap}
+.rowcentered{justify-content: center;}
 
 .col{flex:1}
 
