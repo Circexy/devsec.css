@@ -1,36 +1,38 @@
 .row{display: flex; flex-flow: row wrap}
-.rowcentered{justify-content: center;}
+		.col{flex:1;}
+		.col2{flex:2}
+		.col3{flex:3}
 
-.col{flex:1}
+		/* hide & show */
 
-/* for 12 columns + add media queries */
+		/* mobile // xs */
+		@media( max-width: 767px ) {
+			.hide-xs{display: none;}
+			.show-md{display: none;}
+			.show-l{display: none;}
+			.show-xl{display: none;}
+		}
 
-/* media queries */
-/* mobile */
-/*Mobile (<768px)*/
-.col12{max-width: max-width: calc(768px/12);}
-/* a voir */
+		/* tablette // md */
+		@media ( min-width : 768px ) and ( max-width: 991px) {
+			.hide-md{display: none;}
+			.show-xs{display: none;}
+			.show-l{display: none;}
+			.show-xl{display: none;}
+		}
 
-/* tablettes */
-@media ( min-width : 768px ) {
-.col12{max-width: max-width: calc(768px/12);}
-}
+		/* desktop // l */
+		@media ( min-width : 992px ) and ( max-width: 1199px) {
+			.hide-l{display: none;}
+			.show-xs{display: none;}
+			.show-md{display: none;}
+			.show-xl{display: none;}
+		}
 
-/* desktop */
-@media ( min-width : 992px ) {
-.col12{max-width: max-width: calc(992px/12);}
-}
-
-/* desktop large */
-@media ( min-width : 1200px ) {
-.col12{max-width: max-width: calc(1200px/12);}
-}
-
-.merge2{flex:2}
-.merge3{flex:3}
-/* add more .merge classes if you need to */
-
-.row,.merge2,.merge3, {margin:0 8px} /* optional gutter */
-
-
-.nested{padding:0 !important; margin:0 !important; border: 0 !important}
+		/* desktop large // xl */
+		@media ( min-width : 1200px ) {
+			.hide-xl{display: none;}
+			.show-xs{display: none;}
+			.show-md{display: none;}
+			.show-l{display: none;}
+		}
