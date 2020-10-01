@@ -1,0 +1,35 @@
+.row{display: flex; flex-flow: row wrap}
+
+.col{flex:1}
+
+/* for 12 columns + add media queries */
+
+/* media queries */
+/* mobile */
+/*Mobile (<768px)*/
+.col12{max-width: max-width: calc(768px/12);}
+/* a voir */
+
+/* tablettes */
+@media ( min-width : 768px ) {
+.col12{max-width: max-width: calc(768px/12);}
+}
+
+/* desktop */
+@media ( min-width : 992px ) {
+.col12{max-width: max-width: calc(992px/12);}
+}
+
+/* desktop large */
+@media ( min-width : 1200px ) {
+.col12{max-width: max-width: calc(1200px/12);}
+}
+
+.merge2{flex:2}
+.merge3{flex:3}
+/* add more .merge classes if you need to */
+
+.row,.merge2,.merge3, {margin:0 8px} /* optional gutter */
+
+
+.nested{padding:0 !important; margin:0 !important; border: 0 !important}
