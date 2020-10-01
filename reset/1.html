@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="nothing.css" id="sakura-css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<button id="switchThemeButton" onclick="switchSakuraTheme();">Switch</button>
+	<span id="currentTheme">nothing (default)</span>
+	
+	<h1>lorem ipsum dolor sit amet</h1>
+
+	<ul>
+		<li>lorem ipsum dolor sit amet</li>
+		<li>lorem ipsum dolor sit amet</li>
+		<li>lorem ipsum dolor sit amet</li>
+		<li>lorem ipsum dolor sit amet</li>
+	</ul>
+
+	<input type="text">
+
+	<a href="#">#blabla</a>
+
+	<button>Valider</button>
+
+
+	<script>
+	  var themes = [
+	    {
+	      name: "nothing",
+	      href: "nothing.css",
+	    },
+	    {
+	      name: "resethard",
+	      href: "resethard.css",
+	    },
+	    {
+	      name: "html (navigator)",
+	      href: "html.css",
+	    },
+	    {
+	      name: "bootstrap-reboot",
+	      href: "bootstrap-reboot.css",
+	    },
+	    {
+	      name: "basic",
+	      href: "basic.css",
+	    },
+	    {
+	      name: "yahoo",
+	      href: "yahoo.css",
+	    },
+	    {
+	      name: "base",
+	      href: "base.css",
+	    },
+	    {
+	      name: "initial",
+	      href: "initial.css",
+	    },
+	    {
+	      name: "minireset",
+	      href: "minireset.css",
+	    },
+	    {
+	      name: "html5doctor",
+	      href: "html5doctor.css",
+	    },
+	    {
+	      name: "meyer",
+	      href: "meyer.css",
+	    },
+	    {
+	      name: "undohtml",
+	      href: "undohtml.css",
+	    },
+	    {
+	      name: "normalize",
+	      href: "normalize.css",
+	    },
+	    {
+	      name: "dev",
+	      href: "dev.css",
+	    },
+	  ];
+	  var current = 0;
+	  var sakura = document.getElementById("sakura-css");
+	  sakura.disabled = false;
+	  function toggleSakura() {
+	    if (sakura.disabled === true) {
+	      sakura.disabled = false
+	      switchTag.style.display = 'block';
+	    } else {
+	      sakura.disabled = true
+	      switchTag.style.display = 'none';
+	    }
+	  }
+
+	  var switchTag = document.getElementById("switch");
+	  var currentThemeTag = document.getElementById("currentTheme");
+	  function switchSakuraTheme() {
+	    sakura.href = themes[(current + 1)% themes.length].href;
+	    console.log(sakura.href);
+	    currentThemeTag.innerHTML = themes[(current + 1)% themes.length].name;
+	    current += 1
+	  }
+	</script>
+</body>
+</html>
