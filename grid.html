@@ -21,7 +21,18 @@
 		.row-between {justify-content: space-between;}
 		.row-around {justify-content: space-around;}
 
-		.col {box-sizing: border-box; flex-shrink: 0;}
+		/* #################### */
+		/* CELL */
+		/* #################### */
+		.cell {flex:1;}
+		.cell-2 {flex:2}
+		.cell-3 {flex:3}
+
+		/* #################### */
+		/* COLUMNS */
+		/* #################### */
+
+		/*.col {box-sizing: border-box; flex-shrink: 0;}*/
 		.col-1 {width: calc(100% * 1 / 12);}
 		.col-2 {width: calc(100% * 2 / 12);}
 		.col-3 {width: calc(100% * 3 / 12);}
@@ -36,18 +47,76 @@
 		.col-12 {width: 100%;}
 		.col-fill {width: 0; min-width: 0; flex-grow: 1;}
 
-		/* #################### */
-		/* CELL */
-		/* #################### */
-		.cell{flex:1;}
-		.cell-2{flex:2}
-		.cell-3{flex:3}
+		/* mobile // xs */
+		@media ( max-width: 767px ) {
+		    .col, [class*="col-xs-"], [class^='col-xs-'], [class*="col-md-"], [class^='col-md-'], [class*="col-l-"], [class^='col-l-'], [class*="col-xl-"], [class^='col-xl-'] {flex: 0 1 100%;max-width: 100%;}
+			.col-xs-1 {flex: 0 0 calc((100% / (12/1)));max-width: calc((100% / (12/1)));}
+		    .col-xs-2 {flex: 0 0 calc((100% / (12/2)));max-width: calc((100% / (12/2)));}
+		    .col-xs-3 {flex: 0 0 calc((100% / (12/3)));max-width: calc((100% / (12/3)));}
+		    .col-xs-4 {flex: 0 0 calc((100% / (12/4)));max-width: calc((100% / (12/4)));}
+		    .col-xs-5 {flex: 0 0 calc((100% / (12/5)));max-width: calc((100% / (12/5)));}
+		    .col-xs-6 {flex: 0 0 calc((100% / (12/6)));max-width: calc((100% / (12/6)));}
+		    .col-xs-7 {flex: 0 0 calc((100% / (12/7)));max-width: calc((100% / (12/7)));}
+		    .col-xs-8 {flex: 0 0 calc((100% / (12/8)));max-width: calc((100% / (12/8)));}
+		    .col-xs-9 {flex: 0 0 calc((100% / (12/9)));max-width: calc((100% / (12/9)));}
+		    .col-xs-10 {flex: 0 0 calc((100% / (12/10)));max-width: calc((100% / (12/10)));}
+		    .col-xs-11 {flex: 0 0 calc((100% / (12/11)));max-width: calc((100% / (12/11)));}
+		    .col-xs-12 {flex: 0 0 calc((100% / (12/12)));max-width: calc((100% / (12/12)));}
+		}
+
+		/* tablette // md */
+		@media ( min-width : 768px ) and ( max-width: 991px) {
+			.col-md-1 {flex: 0 0 calc((100% / (12/1)));max-width: calc((100% / (12/1)));}
+		    .col-md-2 {flex: 0 0 calc((100% / (12/2)));max-width: calc((100% / (12/2)));}
+		    .col-md-3 {flex: 0 0 calc((100% / (12/3)));max-width: calc((100% / (12/3)));}
+		    .col-md-4 {flex: 0 0 calc((100% / (12/4)));max-width: calc((100% / (12/4)));}
+		    .col-md-5 {flex: 0 0 calc((100% / (12/5)));max-width: calc((100% / (12/5)));}
+		    .col-md-6 {flex: 0 0 calc((100% / (12/6)));max-width: calc((100% / (12/6)));}
+		    .col-md-7 {flex: 0 0 calc((100% / (12/7)));max-width: calc((100% / (12/7)));}
+		    .col-md-8 {flex: 0 0 calc((100% / (12/8)));max-width: calc((100% / (12/8)));}
+		    .col-md-9 {flex: 0 0 calc((100% / (12/9)));max-width: calc((100% / (12/9)));}
+		    .col-md-10 {flex: 0 0 calc((100% / (12/10)));max-width: calc((100% / (12/10)));}
+		    .col-md-11 {flex: 0 0 calc((100% / (12/11)));max-width: calc((100% / (12/11)));}
+		    .col-md-12 {flex: 0 0 calc((100% / (12/12)));max-width: calc((100% / (12/12)));}
+		}
+
+		/* desktop // l */
+		@media ( min-width : 992px ) and ( max-width: 1199px) {
+			.col-l-1 {flex: 0 0 calc((100% / (12/1)));max-width: calc((100% / (12/1)));}
+		    .col-l-2 {flex: 0 0 calc((100% / (12/2)));max-width: calc((100% / (12/2)));}
+		    .col-l-3 {flex: 0 0 calc((100% / (12/3)));max-width: calc((100% / (12/3)));}
+		    .col-l-4 {flex: 0 0 calc((100% / (12/4)));max-width: calc((100% / (12/4)));}
+		    .col-l-5 {flex: 0 0 calc((100% / (12/5)));max-width: calc((100% / (12/5)));}
+		    .col-l-6 {flex: 0 0 calc((100% / (12/6)));max-width: calc((100% / (12/6)));}
+		    .col-l-7 {flex: 0 0 calc((100% / (12/7)));max-width: calc((100% / (12/7)));}
+		    .col-l-8 {flex: 0 0 calc((100% / (12/8)));max-width: calc((100% / (12/8)));}
+		    .col-l-9 {flex: 0 0 calc((100% / (12/9)));max-width: calc((100% / (12/9)));}
+		    .col-l-10 {flex: 0 0 calc((100% / (12/10)));max-width: calc((100% / (12/10)));}
+		    .col-l-11 {flex: 0 0 calc((100% / (12/11)));max-width: calc((100% / (12/11)));}
+		    .col-l-12 {flex: 0 0 calc((100% / (12/12)));max-width: calc((100% / (12/12)));}
+		}
+
+		/* desktop large // xl */
+		@media ( min-width : 1200px ) {
+			.col-xl-1 {flex: 0 0 calc((100% / (12/1)));max-width: calc((100% / (12/1)));}
+		    .col-xl-2 {flex: 0 0 calc((100% / (12/2)));max-width: calc((100% / (12/2)));}
+		    .col-xl-3 {flex: 0 0 calc((100% / (12/3)));max-width: calc((100% / (12/3)));}
+		    .col-xl-4 {flex: 0 0 calc((100% / (12/4)));max-width: calc((100% / (12/4)));}
+		    .col-xl-5 {flex: 0 0 calc((100% / (12/5)));max-width: calc((100% / (12/5)));}
+		    .col-xl-6 {flex: 0 0 calc((100% / (12/6)));max-width: calc((100% / (12/6)));}
+		    .col-xl-7 {flex: 0 0 calc((100% / (12/7)));max-width: calc((100% / (12/7)));}
+		    .col-xl-8 {flex: 0 0 calc((100% / (12/8)));max-width: calc((100% / (12/8)));}
+		    .col-xl-9 {flex: 0 0 calc((100% / (12/9)));max-width: calc((100% / (12/9)));}
+		    .col-xl-10 {flex: 0 0 calc((100% / (12/10)));max-width: calc((100% / (12/10)));}
+		    .col-xl-11 {flex: 0 0 calc((100% / (12/11)));max-width: calc((100% / (12/11)));}
+		    .col-xl-12 {flex: 0 0 calc((100% / (12/12)));max-width: calc((100% / (12/12)));}
+		}
 
 		/* #################### */
 		/* hide & show */
 		/* #################### */
 		/* mobile // xs */
-		@media( max-width: 767px ) {
+		@media ( max-width: 767px ) {
 			.hide-xs{display: none;}
 			.show-md{display: none;}
 			.show-l{display: none;}
@@ -77,9 +146,18 @@
 			.show-md{display: none;}
 			.show-l{display: none;}
 		}
+
 	</style>
 </head>
 <body>
+	<div class="row">
+		<div class="col-xs-6 col-md-3 col-l-6 col-xl-12" style="background:blue;">xs2 et md6</div>
+		<div class="col-xs-6 col-md-3 col-l-6 col-xl-12" style="background:red;">xs2 et md6</div>
+		<div class="col-xs-6 col-md-3 col-l-6 col-xl-12" style="background:green;">xs2 et md6</div>
+		<div class="col-xs-6 col-md-3 col-l-6 col-xl-12" style="background:yellow;">xs2 et md6</div>
+	</div>
+	<br>
+
 	<div class="row row-middle">
 		<div class="col-4">
 			col-4
